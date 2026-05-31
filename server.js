@@ -29,6 +29,12 @@ const shouldRetryImprovement = responseImprovement.shouldRetryImprovement;
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Middleware log mọi request để dễ debug
+app.use((req, res, next) => {
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    next();
+});
+
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
@@ -148,19 +154,47 @@ async function callAIChat(messages) {
             model: AI_MODEL,
             messages,
             temperature: 0.3,
-            max_tokens: 4096
+            max_tokens: 4096,
+            stream: false // Thử yêu cầu không stream
         })
     });
 
-    const data = await response.json().catch(() => ({}));
-
+    const text = await response.text();
+    
     if (!response.ok) {
-        const message = data.error?.message || data.message || response.statusText || 'Unknown AI API error';
+        let message = 'Unknown AI API error';
+        try {
+            const errData = JSON.parse(text);
+            message = errData.error?.message || errData.message || response.statusText;
+        } catch (e) {
+            message = text.substring(0, 100);
+        }
         throw new Error(`AI API error ${response.status}: ${message}`);
     }
 
-    const reply = data.choices?.[0]?.message?.content;
+    let reply = '';
+    try {
+        // Thử parse JSON thông thường
+        const data = JSON.parse(text);
+        reply = data.choices?.[0]?.message?.content;
+    } catch (e) {
+        // Nếu không phải JSON hợp lệ, có thể là SSE stream (data: {...})
+        const lines = text.split('\n');
+        for (const line of lines) {
+            if (line.trim().startsWith('data: ')) {
+                const dataStr = line.replace('data: ', '').trim();
+                if (dataStr === '[DONE]') continue;
+                try {
+                    const chunk = JSON.parse(dataStr);
+                    const chunkContent = chunk.choices?.[0]?.delta?.content || '';
+                    reply += chunkContent;
+                } catch (err) {}
+            }
+        }
+    }
+
     if (!reply) {
+        console.error("Lỗi parse API response:", text.substring(0, 500));
         throw new Error('AI API khong tra ve noi dung phan hoi hop le');
     }
 
@@ -484,10 +518,13 @@ app.get('/api/improvement-info', (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`\n🎓 UNETI AI Chatbot đang chạy tại: http://localhost:${port}`);
-    console.log(`🔑 Đảm bảo AI_BASE_URL, AI_API_KEY và AI_MODEL đã được cấu hình trong file .env`);
-    console.log(`
+function startServer(startPort) {
+    const server = app.listen(startPort);
+
+    server.on('listening', () => {
+        console.log(`\n🎓 UNETI AI Chatbot đang chạy thành công tại: http://localhost:${startPort}`);
+        console.log(`🔑 Đảm bảo AI_BASE_URL, AI_API_KEY và AI_MODEL đã được cấu hình trong file .env`);
+        console.log(`
 ========================================
 📊 HỆ THỐNG TỰ HỌC VÀ CẢI THIỆN
 ========================================
@@ -500,11 +537,40 @@ app.listen(port, () => {
 ========================================
 
 📖 Các địa chỉ hữu ích:
-📊 Dashboard: http://localhost:${port}/dashboard.html
-📈 API Stats: http://localhost:${port}/api/stats
-📚 Knowledge Base: http://localhost:${port}/api/knowledge-base
-⭐ Quality Info: http://localhost:${port}/api/quality-info
-❓ Clarification Info: http://localhost:${port}/api/clarification-info
-🔄 Improvement Info: http://localhost:${port}/api/improvement-info
-    `);
-});
+📊 Dashboard: http://localhost:${startPort}/dashboard.html
+📈 API Stats: http://localhost:${startPort}/api/stats
+📚 Knowledge Base: http://localhost:${startPort}/api/knowledge-base
+⭐ Quality Info: http://localhost:${startPort}/api/quality-info
+❓ Clarification Info: http://localhost:${startPort}/api/clarification-info
+🔄 Improvement Info: http://localhost:${startPort}/api/improvement-info
+        `);
+    });
+
+    server.on('error', (err) => {
+        if (err.code === 'EADDRINUSE' || err.code === 'EACCES') {
+            console.log(`⚠️ Port ${startPort} đang bị bận hoặc Windows chặn (EACCES). Đang thử port ${startPort + 1}...`);
+            startServer(startPort + 1);
+        } else {
+            console.error('\n❌ Lỗi nghiêm trọng khi khởi động server:', err);
+        }
+    });
+
+    // Xử lý khi nhấn Ctrl+C hoặc tắt process (cancel)
+    process.on('SIGINT', () => {
+        console.log('\n🛑 Nhận tín hiệu SIGINT (Ctrl+C). Đang đóng server...');
+        server.close(() => {
+            console.log('✅ Server đã được đóng hoàn toàn. Tạm biệt!');
+            process.exit(0);
+        });
+    });
+
+    process.on('SIGTERM', () => {
+        console.log('\n🛑 Nhận tín hiệu SIGTERM. Đang đóng server...');
+        server.close(() => {
+            console.log('✅ Server đã được đóng hoàn toàn. Tạm biệt!');
+            process.exit(0);
+        });
+    });
+}
+
+startServer(Number(port));

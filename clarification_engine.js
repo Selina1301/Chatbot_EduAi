@@ -8,21 +8,21 @@
 function detectAmbiguity(question) {
     const ambiguityIndicators = [];
     
-    // 1. Câu hỏi quá ngắn (< 10 từ)
+    // 1. Câu hỏi quá ngắn (< 3 từ)
     const wordCount = question.split(/\s+/).length;
-    if (wordCount < 5) {
+    if (wordCount < 3) {
         ambiguityIndicators.push({
             type: 'TOO_SHORT',
-            confidence: 0.7,
+            confidence: 0.5,
             message: 'Câu hỏi quá ngắn, có thể thiếu bối cảnh'
         });
     }
     
     // 2. Có các đại từ mơ hồ (cái này, cái kia, nó, chúng nó, ...)
-    if (/\b(cái này|cái kia|nó|chúng nó|nó là|cái gì|gì|cái)/i.test(question)) {
+    if (/\b(cái này|cái kia|nó|chúng nó|nó là|cái gì|gì|cái)\b/i.test(question)) {
         ambiguityIndicators.push({
             type: 'AMBIGUOUS_PRONOUN',
-            confidence: 0.8,
+            confidence: 0.5,
             message: 'Câu hỏi chứa đại từ mơ hồ'
         });
     }
@@ -141,8 +141,8 @@ function generateClarifyingQuestions(question, detectedAmbiguities) {
 
 // Đánh giá liệu câu hỏi có cần làm rõ không
 function shouldAskClarification(ambiguityScore, severity) {
-    // Nếu ambiguity score > 0.6 hoặc severity = HIGH, nên hỏi
-    return ambiguityScore > 0.6 || severity === 'HIGH';
+    // Nếu ambiguity score > 0.8, mới nên hỏi để tránh spam
+    return ambiguityScore > 0.8;
 }
 
 // Tạo response làm rõ (gửi cho user)
