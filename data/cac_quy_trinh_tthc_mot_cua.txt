@@ -1,0 +1,1583 @@
+BẢNG TỔNG HỢP QUY TRÌNH CÁC BƯỚC THỰC HIỆN GIẢI QUYẾT THỦ TỤC HÀNH CHÍNH CỦA SINH VIÊN TẠI BỘ PHẬN MỘT CỬA
+
+TT
+
+I
+
+Tên các thủ tục
+hành chính
+
+Đối tượng thực hiện công việc
+
+Quy trình công việc
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+Ghi chú
+
+PHÒNG CÔNG TÁC SINH VIÊN
+
+B-1
+1
+
+Đơn vị giải quyết
+Ký hiệu
+Thời gian trả
+biểu mẫu Đơn vị thực Đơn vị phối hợp
+KQ
+hiện
+
+Đăng ký cấp lại mật khẩu trang
+cá nhân sinh viên
+
+Đăng ký xin cấp giấy xác nhận
+sinh viên đang học tại trường
+
+Đăng ký xin cấp giấy xác nhận
+vay vốn
+
+Đăng ký xin cấp giấy xác nhận
+đối tượng chính sách
+
+Đăng ký xin xác nhận sổ ưu đãi
+
+Đăng ký xin cấp giấy xác nhận
+làm vé tháng xe buýt
+
+Đăng ký xin cấp giấy xác nhận
+thuê nhà ở sinh viên
+
+SV đang học tại trường bị mất, quên mật khẩu.
+
+SV cần xin việc, xin miễn lệnh gọi nghĩa vụ quân
+sự…
+
+SV đang học tại trường có nhu cầu vay vốn tín dụng
+SV.
+
+SV đang học tại trường thuộc đối tượng được miễn
+giảm học phí theo quy định.
+
+SV là con thương binh, con bệnh binh, con của người
+nhiễm chất độc hóa học,…được hưởng chế độ ưu đãi
+trong giáo dục.
+
+SV đang học tại trường có nhu cầu làm vé xe buýt.
+
+SV có nhu cầu thuê nhà ở sinh viên
+
+SV đề nghị tại bộ phận Một cửa hoặc gửi
+đề
+nghị
+qua
+Email:
+sv.phongctsv@uneti.edu.vn
+
+MC-CTSV-01
+
+Phòng CTSV
+
+2 ngày
+
+SV xuất trình thẻ sinh viên.
+
+B-2
+
+Nhận kết quả trực tiếp hoặc qua email cá
+nhân.
+
+B-1
+
+SV đề nghị tại bộ phận Một cửa hoặc gửi
+đề
+nghị
+qua
+Email:
+MC-CTSV-02
+sv.phongctsv@uneti.edu.vn
+
+Phòng CTSV
+
+2 ngày
+
+SV mang theo thẻ SV đến nhận kết quả.
+
+Phòng CTSV
+
+2 ngày
+
+SV mang theo thẻ SV đến nhận kết quả.
+
+Phòng CTSV
+
+2 ngày
+
+SV mang theo thẻ SV đến nhận kết quả.
+
+Phòng CTSV
+
+2 ngày
+
+SV mang theo thẻ SV đến nhận kết quả.
+
+Phòng CTSV
+
+2 ngày
+
+SV mang theo thẻ SV đến nhận kết quả.
+
+Phòng CTSV
+
+2 ngày
+
+SV mang theo thẻ SV đến nhận kết quả.
+
+B-2
+
+Nhận kết quả.
+
+B-1
+
+SV đề nghị tại bộ phận Một cửa hoặc gửi
+đề
+nghị
+qua
+Email:
+MC-CTSV-02
+sv.phongctsv@uneti.edu.vn
+
+B-2
+
+Nhận kết quả.
+
+B-1
+
+SV đề nghị tại bộ phận Một cửa hoặc gửi
+đề
+nghị
+qua
+Email:
+MC-CTSV-02
+sv.phongctsv@uneti.edu.vn
+
+B-2
+
+Nhận kết quả.
+
+B-1
+
+SV làm phiếu tiếp nhận yêu cầu.
+
+B-2
+
+Nộp phiếu tiếp nhận yêu cầu kèm sổ ưu
+đãi.
+
+B-3
+
+Nhận kết quả.
+
+B-1
+
+SV làm phiếu tiếp nhận yêu cầu.
+
+B-2
+
+Nộp phiếu tiếp nhận yêu cầu cùng bản
+MC-CTSV-02
+đăng ký làm vé tháng xe buýt (lấy tại các
+điểm bán vé tháng xe buýt).
+
+B-3
+
+Nhận kết quả.
+
+B-1
+
+SV làm phiếu tiếp nhận yêu cầu.
+
+B-2
+
+Nộp phiếu tiếp nhận yêu cầu cùng đơn
+đăng ký thuê nhà ở sinh viên (lấy tại khu MC-CTSV-02
+ký túc xá SV)
+
+MC-CTSV-02
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+thuê nhà ở sinh viên
+
+SV có nhu cầu thuê nhà ở sinh viên
+
+SV đã tham gia mua thẻ bảo hiểm y tế tại trường
+Đăng ký cấp lại thẻ bảo hiểm y tế
+nhưng làm mất, hỏng hoặc thất lạc thẻ.
+
+SV được điều động vào lực lượng vũ trang hoặc bị
+Đăng ký xin bảo lưu kết quả học
+ốm/ tai nạn... phải điều trị thời gian dài ngày, SV có
+tập
+hoàn cảnh gia đình khó khăn.
+
+Đăng ký xin quay trở lại học tập
+
+Xin thôi học do hoàn cảnh gia
+đình khó khăn
+
+SV hết thời hạn bảo lưu kết quả học tập, SV bị đình
+chỉ học tập muốn quay trở lại trường để tiếp tục học
+tập.
+
+SV đang học tại trường có hoàn cảnh gia đình khó
+khăn và có nguyện vọng xin thôi học.
+
+Đăng ký xin nghỉ học tạm thời (1 SV bị ốm/ tai nạn... cần nghỉ học thời gian ngắn ngày
+tuần) có lý do
+để điều trị hoặc khám sức khỏe.
+
+Đăng ký xin chuyển địa điểm học SV học tập tại cơ sở Hà Nội có nguyện vọng chuyển
+tập
+địa điểm học tập về cơ sở Nam Định và ngược lại.
+
+MC-CTSV-02
+
+B-3
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị theo mẫu cung cấp số
+điện thoại, địa chỉ gmail, xin xác nhận
+của CVHT, Khoa chuyên môn, chính
+quyền địa phương.
+
+B-2
+
+Nộp đơn đề nghị kèm giấy tờ xác minh
+lý do xin bảo lưu.
+
+B-3
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp đơn đề nghị (có ý kiến gia đình, xác
+nhận của chính quyền địa phương) kèm
+quyết định bảo lưu đã có.
+
+B-3
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp đơn đề nghị có đầy đủ xác nhận về
+lý do xin thôi học.
+
+B-3
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp đơn đề nghị kèm giấy tờ xác minh
+lý do xin nghỉ học.
+
+B-3
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp đơn đề nghị có ý kiến của gia đình.
+
+B-3
+
+Nhận kết quả.
+
+CTSV-SV-06
+
+Phòng CTSV
+
+2 ngày
+
+SV mang theo thẻ SV đến nhận kết quả.
+
+Phòng CTSV
+
+2 ngày
+
+SV mang theo thẻ SV đến nhận kết quả.
+
+5 ngày
+
+Giấy tờ xác nhận của các cấp có thẩm
+quyền: Quyết định điều động vào lực lượng
+vũ trang/ Xác nhận của cơ quan y tế cấp
+huyện trở lên/ Xác nhận của chính quyền
+địa phường về hoàn cảnh gia đình khó
+khăn.
+SV mang theo thẻ SV đến nhận kết quả.
+
+5 ngày
+
+SV làm đơn đề nghị trước thời điểm bắt
+đầu học kỳ mới 14 ngày.
+SV mang theo thẻ SV đến nhận kết quả.
+
+Phòng Đào tạo, Khoa
+chuyên môn, CVHT
+
+CTSV-SV-03
+
+Phòng CTSV
+
+CTSV-SV-02
+
+Phòng CTSV
+
+CTSV-SV-05
+
+Phòng CTSV
+
+Cố vấn học tập các lớp
+
+5 ngày
+
+Đơn xin thôi học có đầy đủ xác nhận của
+gia đình, của chính quyền địa phương, Cố
+vấn học tập.
+SV mang theo thẻ SV đến nhận kết quả.
+
+Phòng CTSV
+
+Cố vấn học tập các lớp
+
+2 ngày
+
+Giấy xác nhận của cơ quan y tế từ cấp
+huyện trở lên.
+SV mang theo thẻ SV đến nhận kết quả.
+
+5 ngày
+
+SV làm đơn đề nghị trước thời điểm bắt
+đầu học kỳ mới 14 ngày.
+SV mang theo thẻ SV đến nhận kết quả.
+
+CTSV-SV-04
+
+CTSV-SV-01.
+
+Phòng CTSV
+
+II. PHÒNG ĐÀO TẠO
+
+14
+
+SV truy cập vào phòng Zoom
+- Địa chỉ ID: 933 286 4880
+- Passcode: uneti
+Tiếp nhận thắc mắc của sinh viên
+về tài khoản LMS , Gmail do nhà SV không truy cập được vào tài khoản LMS, Gmail. trong giờ hành chính hoặc qua Email:
+sv.phongdaotao@uneti.edu.vn
+trường cấp
+Bộ phận Một cửa hõ trợ liên hệ trực tiếp Phòng
+tạo để giải đáp thắc mắc cho SV.
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+1 ngày
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+SV truy cập vào phòng Zoom
+- Địa chỉ ID: 5920479338
+- PassCode: uneti.
+Thời gian: - Sáng từ 8 giờ đến 11 giờ;
+Đề nghị đăng ký học tập, hủy
+- Chiều từ: 14 giờ đến 16 giờ
+đăng ký học tập, thắc mắc về lịch SV trong toàn trường có nhu cầu về đăng ký học tập. hoặc qua Email: sv.phongdaotao@uneti.edu.vn
+học…
+Bộ phận Một cửa hõ trợ thu đơn đề nghị, liên hệ
+trực tiếp Phòng tạo để giải đáp thắc mắc cho SV.
+
+Đăng ký xin bảng điểm tạm thời
+
+Trường hợp 1: SV đang học tập tại trường có nhu cầu
+xin việc, xin học bổng địa phương.
+Trường hợp 2: SV chuyển trường, xin thôi học.
+
+Đăng ký xin cấp lại bảng ghi kết SV tốt nghiệp đã được cấp bảng ghi kết quả học tập
+quả học tập toàn khóa (Phụ lục
+toàn khóa (Phụ lục văn bằng) nhưng bị mất, hỏng, có
+văn bằng) bị mất, hỏng
+đề nghị trường cấp lại.
+
+Đăng ký xác nhận nợ môn
+
+Đăng ký xác nhận đang chờ xét
+tốt nghiệp
+
+B-2
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp đơn đề nghị kèm bản photo Bằng tốt
+nghiệp, lệ phí.
+
+B-3
+
+Nhận kết quả.
+
+B-1
+
+SV đề nghị tại bộ phận Một cửa hoặc gửi
+đề
+nghị
+qua
+Email:
+sv.phongctsv@uneti.edu.vn
+
+SV khóa cũ chưa tốt nghiệp do nợ môn.
+
+SV đã đủ điều kiện tốt nghiệp đang chờ nhà trường
+xét duyệt.
+
+Đăng ký xác nhận đã hoàn thành SV đã tốt nghiệp cần xin việc, du học…(theo yêu cầu
+khóa học và tốt nghiệp
+của cơ quan, doanh nghiệp…).
+
+Đăng ký xác nhận thời khóa biểu
+SV đang học cần xin việc làm thêm...
+theo học kỳ
+
+Đăng ký xét tốt nghiệp
+
+B-1
+
+SV chưa đủ điều kiện được công nhận tốt nghiệp
+trong các lần xét tốt nghiệp trước, có đề nghị được
+xét công nhận tốt nghiệp.
+
+Trường hợp 1: SV đề nghị tại bộ phận
+Một
+cửa
+hoặc
+qua
+Email:
+sv.phongctsv@uneti.edu.vn
+Trường hợp 2: SV làm phiếu tiếp nhận
+yêu cầu. Nộp phiếu yêu cầu kèm bản
+photo quyết định chuyển trường hoặc
+quyết định thôi học.
+
+B-2
+
+Nhận kết quả.
+
+B-1
+
+SV đề nghị tại bộ phận Một cửa hoặc gửi
+đề
+nghị
+qua
+Email:
+sv.phongctsv@uneti.edu.vn
+
+B-2
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp đơn đề nghị kèm bản photo bảng
+điểm, bằng tốt nghiệp, lệ phí.
+
+B-3
+
+Nhận kết quả.
+
+B-1
+
+SV đề nghị tại bộ phận Một cửa hoặc gửi
+đề
+nghị
+qua
+Email:
+sv.phongctsv@uneti.edu.vn
+
+B-2
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail. Làm giấy xác
+nhận nhân sự (XNNS) hoặc phiếu lý lịch
+tư pháp (LLTP).
+
+B-2
+
+Nộp đơn đề nghị, giấy XNNS/phiếu
+LLTP, bản sao giấy khai sinh, lệ phí.
+
+ĐT-SV-01.
+ĐT-SV-01A
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+2-5 ngày
+
+MC-ĐT-02
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+5 ngày
+
+SV mang theo thẻ SV đến nhận kết quả.
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+5 ngày
+
+SV mang theo thẻ SV/CMTND/CCCD.
+
+MC-ĐT-03
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+5 ngày
+
+SV mang theo thẻ SV/CMTND/CCCD.
+
+MC-ĐT-03
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+5 ngày
+
+SV mang theo thẻ SV/CMTND/CCCD.
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+5 ngày
+
+SV mang theo thẻ SV/CMTND/CCCD.
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+5 ngày
+
+SV mang theo thẻ SV/CMTND/CCCD.
+
+Phòng Đào tạo
+
+Phòng CTSV;
+Phòng Khảo Thí &ĐBCL;
+Khoa chuyên môn.
+
+ĐT-SV-02
+
+ĐT-SV-03
+
+MC-ĐT-03
+
+ĐT-SV-04
+ĐT-SV-04A
+
+Theo thông báo
+
+Giấy xác nhận nhân sự có xác nhận của
+UBND phường (xã) nơi đăng ký HKTT.
+(Có thời hạn 1 tháng tính đến thời điểm xét
+tốt nghiệp). Hoặc phiếu lý lịch tư pháp
+được cấp bởi cơ quan có thẩm quyền.
+
+xét công nhận tốt nghiệp.
+
+23
+
+24
+
+25
+
+Đăng ký xin cấp bản sao văn
+bằng, chứng chỉ từ sổ gốc
+
+Đăng ký xin chỉnh sửa thông tin
+văn bằng, chứng chỉ
+
+Xin miễn chứng chỉ Giáo dục
+quốc phòng (GDQP)
+
+SV đã được cấp văn bằng tốt nghiệp và các chứng
+chỉ nhưng bị mất, hỏng, có đề nghị xin cấp lại, cấp
+thêm bản sao.
+
+SV đã được cấp văn bằng tốt nghiệp và các chứng
+chỉ, nhưng nội dung bị ghi sai, có đề nghị Nhà trường
+cấp quyết định cải chính.
+
+SV đã có chứng chỉ GDQP của trường/trung tâm
+khác cấp
+
+ĐT-SV-04A
+
+B-3
+
+Xem kết quả xét công nhận tốt nghiệp
+trên website trường hoặc email cá nhân.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp đơn đề nghị đã có xác nhận của cơ
+quan công an, kèm bản sao giấy khai
+sinh, lệ phí.
+
+B-3
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp đơn; 01 bản sao (công chứng) giấy
+khai sinh cấp lại (sau khi có quyết định
+cải chính); 01 bản sao (công chứng)
+quyết định cải chính hộ tịch, 01 bản sao
+(công chứng) CMTND/CCCD
+
+B-3
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+B-3
+
+26
+
+27
+
+Đăng ký xin miễn chứng chỉ
+Tiếng Anh đầu ra
+
+Đề nghị chuyển điểm học phần
+tương đương
+
+SV năm cuối có chứng chỉ KNLNN Việt Nam 6 bậc,
+chứng chỉ ngoại ngữ quốc tế, Bằng cử nhân Tiếng
+Anh.
+
+Học phần SV đã học có mã học phần khác với mã
+học phần trong chương trình khung (SV xuống khóa,
+SV đăng ký học mới, học lại học phần có mã học
+phần đã thay đổi)
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp đơn đề nghị kèm bản photo công
+chứng chứng chỉ ngoại ngữ.
+
+B-3
+
+Nhận kết quả qua email cá nhân, thông
+báo trên website nhà trường.
+
+B-1
+B-2
+B-3
+B-1
+
+28
+
+29
+
+30
+
+Đề nghị chuyển điểm học phần
+SV chuyển từ trường khác có nguyện vọng xin
+chuyển trường (chuyển từ trường chuyển điểm những học phần tương đương đã học ở
+khác về)
+trường cũ.
+
+SV năm cuối đã đủ điều kiện xét công nhận tốt
+Đăng ký xin hoãn xét công nhận
+nghiệp nhưng muốn hoãn xét tốt nghiệp để học cải
+tốt nghiệp
+thiện điểm
+
+Đăng ký xin cấp phát bảng điểm
+SV trong toàn trường đã được xét công nhận tốt
+tốt nghiệp, bằng tốt nghiệp không
+nghiệp, đến nhận các giấy tờ không theo kế hoạch.
+đúng thời gian quy định
+
+Nộp đơn kèm bản photo công chứng
+chứng chỉ GDQP.
+Nhận kết quả qua email, trang học tập cá
+nhân
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+Nộp đơn đề nghị.
+Nhận kết quả qua email, trang học tập cá
+nhân
+
+ĐT-SV-05
+
+ĐT-SV-06
+
+MC-ĐT-07
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+5 ngày
+
+Đơn đề nghị phải có xác nhận của cơ quan
+công an gần nhất khi bị mất bản chính văn
+bằng TN, chứng chỉ.
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+5 ngày
+
+SV mang theo CMTND/CCCD; bản chính
+văn bằng, chứng chỉ, giấy khai sinh, quyết
+định cải chính hộ tịch để đối chiếu.
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+5 ngày
+
+MC-ĐT-07
+
+Phòng Đào tạo
+
+Phòng CTSV; Phòng
+Khảo thí & ĐBCL; Khoa
+chuyên môn.
+
+Trước khi xét tốt
+nghiệp
+7 ngày
+
+ĐT-SV-08
+
+Phòng Đào tạo
+
+Phòng CTSV; Phòng
+Khảo thí & ĐBCL; Khoa
+chuyên môn.
+
+5 ngày
+
+Phòng Đào tạo
+
+Phòng CTSV; Phòng
+Khảo thí & ĐBCL; Khoa
+chuyên môn.
+
+5 ngày
+
+Phòng Đào tạo
+
+Phòng CTSV;
+CVHT/Khoa chuyên môn
+
+Theo thông báo
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp đơn đề nghị
+
+B-3
+
+Nhận kết quả qua email, trang học tập cá
+nhân
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail. Xin xác nhận
+của CVHT/Khoa chuyên môn, nộp lại
+cho bộ phận Một cửa.
+
+B-2
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị, nộp lệ phí.
+
+tốt nghiệp). Hoặc phiếu lý lịch tư pháp
+được cấp bởi cơ quan có thẩm quyền.
+
+Khoa chuyên môn.
+
+ĐT-SV-09
+
+ĐT-SV-10
+
+ĐT-SV-11
+
+Trường hợp 1: SV có chứng chỉ quốc tế:
++ Bản sao (công chứng) phiếu điểm còn
+hiệu lực, hoặc;
++ Bản sao (công chứng) chứng chỉ còn hiệu
+lực.
+(Ngày cấp chứng chỉ không quá 24 tháng so
+với ngày xét tốt nghiệp).
+Trường hợp 2: SV có văn bằng:
++ Bản sao văn bằng.
+
+SV nộp đơn đề nghị trước thời điểm bắt
+đầu học kỳ mới 14 ngày.
+
+SV nộp kèm bản sao quyết định chuyển
+trường, bản photo quyết định tiếp nhận, bản
+sao bảng điểm.
+
+Thời điểm làm đơn theo thông báo xét tốt
+nghiệp của Nhà trường.
+
+Thứ 5 hàng tuần
+Nhận kết quả tại phòng 105 tòa HA3 khu
+vào giờ hành chính
+giảng đường, ngõ 454 Minh Khai, HBT,
+(Trừ ngày nghỉ, lễ,
+HN.
+tết)
+
+30
+
+31
+
+32
+
+33
+
+34
+
+Đăng ký xin cấp phát bảng điểm
+SV trong toàn trường đã được xét công nhận tốt
+tốt nghiệp, bằng tốt nghiệp không
+nghiệp, đến nhận các giấy tờ không theo kế hoạch.
+đúng thời gian quy định
+
+Ủy quyền cho người thân đến
+nhận các loại giấy tờ sau khi
+được xét công nhận tốt nghiệp
+
+Đăng ký xin xác minh văn bằng
+
+Đăng ký xin học cùng lúc hai
+chương trình
+
+Đăng ký xin học chương trình
+đào tạo chất lượng
+
+SV không đến nhận được trực tiếp các giấy tờ của
+mình, phải uỷ quyền cho người thân (bố, mẹ, vợ,
+chồng, anh, chị, em ruột) đến nhận.
+
+SV đã tốt nghiệp cần xin việc, du học…(theo yêu cầu
+của cơ quan, doanh nghiệp…).
+
+SV các khóa đào tạo hệ chính quy trình độ đại học
+hiện đang học tại trường.
+
+SV được tuyển sinh vào trường, đủ điều kiện theo
+quy định của nhà trường, có nhu cầu, tự nguyện đăng
+ký học lớp đào tạo chất lượng.
+SV học hết năm thứ nhất có nhu cầu xin chuyển sang
+học lớp đào tạo chất lượng.
+
+B-2
+
+Nhận kết quả.
+
+B-1
+
+Làm giấy ủy quyền có đầy đủ xác nhận
+theo mẫu.
+
+B-2
+
+Mang giấy ủy quyền; CMTND/CCCD
+của người ủy quyền, người được ủy
+quyền; bản photo 2 CMTND/CCCD trên;
+Sổ Hộ khẩu và nhận các giấy tờ được
+cấp.
+
+B-1
+
+Nộp công văn của cơ quan, doanh nghiệp
+kèm bản photo bảng điểm, bằng tốt
+nghiệp.
+
+B-2
+
+Nhận kết quả.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp đơn đề nghị.
+
+B-3
+
+Nhận kết quả qua email cá nhân/ điện
+thoại/ thông báo trên website nhà trường.
+
+B-1
+
+Làm đơn đề nghị theo mẫu, cung cấp số
+điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp đơn đề nghị có xác nhận của khoa
+chuyên môn.
+
+B-3
+
+Nhận kết quả qua trang học tập cá nhân.
+
+B-1
+
+Làm phiếu tiếp nhận yêu cầu, cung cấp
+số điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp phiếu tiếp nhận yêu cầu kèm bản
+photo công chứng chứng chỉ ngoại ngữ.
+
+B-3
+
+Nhận kết quả qua email cá nhân, thông
+báo trên website nhà trường.
+
+B-1
+
+Làm phiếu tiếp nhận yêu cầu, cung cấp
+số điện thoại, địa chỉ gmail.
+
+ĐT-SV-11
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+Thứ 5 hàng tuần
+Nhận kết quả tại phòng 105 tòa HA3 khu
+vào giờ hành chính
+giảng đường, ngõ 454 Minh Khai, HBT,
+(Trừ ngày nghỉ, lễ,
+HN.
+tết)
+
+ĐT-SV-11
+ĐT-SV-12
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+Thứ 5 hàng tuần
+Nhận kết quả tại phòng 105 tòa HA3 khu
+vào giờ hành chính
+giảng đường, ngõ 454 Minh Khai, HBT,
+(Trừ ngày nghỉ, lễ,
+HN.
+tết)
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+ĐT-SV-13
+
+Phòng Đào tạo
+
+Phòng CTSV
+
+5 ngày
+
+Việc nhận kết quả có thể trực tiếp tại bộ
+phận Một cửa hoặc gián tiếp qua đường
+bưu điện tùy theo yêu cầu của sinh viên/cơ
+quan, doanh nghiệp.
+
+Theo thông báo
+
+SV đăng ký ngành học ở chương trình thứ 2
+phải khác ngành đào tạo đang theo học
+(ngành chính).
+SV hoàn thành tối thiểu học kỳ thứ nhất
+năm học đầu tiên của chương trình thứ
+nhất.
+SV không thuộc diện xếp hạng học lực yếu.
+
+ĐT-SV-14
+ĐT-SV-15
+
+Phòng Đào tạo
+
+Theo thông báo
+
+SV có KQ điểm tốt nghiệp THPT cao, được
+xét học bổng học kỳ 1 sẽ được nhà trường
+xếp vào lớp CLC, SV không cần làm đơn
+đăng ký. Nếu SV không có nhu cầu học lớp
+này, SV làm đơn xin rút khỏi lớp.
+
+MC-KT-01
+
+Tuần thứ 2 kể từ
+Phòng Khảo thí & Phòng CTSV; Phòng Đào
+thời điểm bắt đầu
+ĐBCL
+tạo; Khoa chuyên môn.
+học kỳ mới
+
+SV nộp đơn đề nghị vào thời điểm 2 tuần
+trước khi bắt đầu kỳ học đến tuần đầu tiên
+của kỳ học. Ngày cấp chứng chỉ không quá
+24 tháng so với ngày nhà trường ra quyết
+định công nhận miễn học, miễn thi học
+phần tiếng anh.
+
+MC-KT-02
+
+Phòng Khảo thí &
+ĐBCL
+
+Phòng CTSV
+
+Theo thông báo tổ
+chức thi kết thúc
+học phần (5 -7
+ngày)
+
+Trong vòng 3 ngày kể từ khi điểm thi được
+công bố trên trang web (trang cá nhân SV).
+SV đăng ký phúc khảo tại bộ phận một cửa.
+( Theo Quyết định số 903/ QĐĐHKTKTCN ngày 28/12/2018)
+
+MC-KT-03
+
+Phòng Khảo thí &
+ĐBCL
+
+Phòng CTSV
+
+3 ngày
+
+Thời điểm SV thắc mắc lịch thi trước kỳ
+thi 7 ngày (đối với thi lần 1).SV thắc mắc
+lịch thi trước khi thi 3 ngày (đối với thi lại).
+
+MC-KT-04
+
+Phòng Khảo thí &
+ĐBCL
+
+Phòng CTSV
+
+5 ngày
+
+SV thắc mắc trong vòng từ 10 đến 14 ngày
+kể từ khi điểm thi lần 1 được công bố trên
+trang cá nhân (theo thông báo, kế hoạch thi
+của từng kỳ).
+
+Phòng CTSV
+Khoa chuyên môn
+
+III PHÒNG KHẢO THÍ VÀ ĐẢM BẢO CHẤT LƯỢNG
+
+35
+
+36
+
+37
+
+38
+
+Đăng ký xin miễn học, miễn thi
+Tiếng Anh
+
+Đăng ký xin phúc khảo điểm thi
+lần 1, thi lại
+
+SV đang học có chứng chỉ KNLNN Việt Nam 6 bậc,
+chứng chỉ ngoại ngữ quốc tế, Bằng cử nhân Tiếng
+Anh.
+
+SV sau khi được thông báo kết quả thi nhưng thấy
+chưa phù hợp với thực tế bài làm của mình, có đề
+nghị chấm thi phúc khảo.
+
+Tiếp nhận thắc mắc lịch thi
+(trùng lịch, không có lịch, không
+SV toàn trường đang trong kỳ thi kết thúc học phần.
+xem được lịch thi)
+
+Tiếp nhận thắc mắc đăng ký thi
+lại không được do trùng lịch, lỗi
+SV đăng ký thi lại do thi lần 1 không đạt
+web, thi không theo kế hoạch…)
+
+B-2
+
+Nhận kết quả qua email cá nhân.
+
+B-1
+
+Làm phiếu tiếp nhận yêu cầu, cung cấp
+số điện thoại, địa chỉ gmail.
+
+B-2
+
+Nhận kết quả qua email cá nhân.
+
+B-1
+
+Làm phiếu tiếp nhận yêu cầu, cung cấp
+số điện thoại, địa chỉ gmail.
+
+38
+
+39
+
+Tiếp nhận thắc mắc đăng ký thi
+lại không được do trùng lịch, lỗi
+SV đăng ký thi lại do thi lần 1 không đạt
+web, thi không theo kế hoạch…)
+
+Đề nghị xin hoãn thi
+
+SV bị trùng lịch, đi viện, thực hiện nhiệm vụ nhà
+trường giao…
+
+B-2
+
+Nhận kết quả trực tiếp luôn hoặc qua
+email, trang học tập cá nhân.
+
+B-1
+
+Làm phiếu tiếp nhận yêu cầu, cung cấp
+số điện thoại, địa chỉ gmail.
+
+B-2
+B-3
+
+40
+
+41
+
+42
+
+Đề nghị xin hủy đăng ký thi lại
+(do đạt điểm HP sau phúc khảo,
+điều chỉnh điểm thường kỳ, hủy
+để học lại…)
+
+SV đạt điểm HP sau phúc khảo, điều chỉnh điểm
+thường kỳ, hủy để học lại…
+
+B-2
+
+Đề nghị xem, điều chỉnh, bổ sung
+SV nhận thấy kết quả học tập của mình bị sai lệch,
+điểm thường kỳ, điểm thi
+hoặc bị thiếu, có đề nghị điều chỉnh, bổ sung.
+
+Tiếp nhận thắc mắc cấm thi
+
+B-1
+
+B-1
+
+Nộp phiếu tiếp nhận yêu cầu kèm giấy tờ
+xác minh lý do hoãn thi.
+Đăng ký thi lại theo kế hoạch thông báo
+của nhà trường.
+Làm phiếu tiếp nhận yêu cầu, cung cấp
+số điện thoại, địa chỉ gmail.
+
+MC-KT-04
+
+Phòng Khảo thí &
+ĐBCL
+
+Phòng CTSV
+
+5 ngày
+
+SV thắc mắc trong vòng từ 10 đến 14 ngày
+kể từ khi điểm thi lần 1 được công bố trên
+trang cá nhân (theo thông báo, kế hoạch thi
+của từng kỳ).
+
+MC-KT-05
+
+Phòng Khảo thí &
+ĐBCL
+
+Phòng CTSV
+
+3 ngày
+
+SV làm thủ tục hoãn thi trước khi thi 1
+ngày tại bộ phận Một cửa. (Có thể trong
+ngày thi môn đó đối với những trường hợp
+đặc biệt).
+
+MC-KT-06
+
+Phòng Khảo thí &
+ĐBCL
+
+Phòng CTSV
+
+5 ngày
+
+Thời điểm SV xin hủy đăng ký thi lại trước
+ngày thi 5 ngày.
+
+MC-KT-07
+
+Phòng Khảo thí &
+ĐBCL
+
+Phòng CTSV
+
+5 ngày
+
+SV được thắc mắc điểm quá trình trong
+vòng 7 ngày kể từ khi điểm quá trình được
+công bố trên trang cá nhân.
+
+2 ngày
+
+Chỉ giải quyết cho những trường hợp đã
+hoàn tất thủ tục đóng học phí và đến đăng
+ký trước ngày thi ít nhất 2 ngày.
+(SV cần kiểm tra công nợ, nếu công nợ vẫn
+chưa được xóa cần liên hệ sớm để được
+Phòng TCKT xử lý kịp thời. Phòng
+KT&ĐBCL chỉ xử lý cấm thi đối với
+trường hợp công nợ đã bằng 0).
+
+Nộp đề nghị theo kế hoạch học tập trong
+học kỳ, trước khi học phần bắt đầu 14 ngày
+Trường hợp cá nhân SV làm đơn theo mẫu,
+xin chữ ký CVHT/GVHD, Khoa chuyên
+môn.
+
+Nhận kết quả qua email, trang học tập cá
+nhân.
+Làm phiếu tiếp nhận yêu cầu, cung cấp
+số điện thoại, địa chỉ gmail.
+
+B-2
+
+Nhận kết quả qua email, trang học tập cá
+nhân.
+
+B-1
+
+Cung cấp thông tin cá nhân, xuất trình
+biên lai nộp học phí (hoặc ảnh chụp
+chuyển khoản qua internet banking).
+
+SV nộp học phí muộn hoặc vì lý do khách quan nên
+chưa được trừ công nợ.
+
+Phòng Khảo thí &
+ĐBCL
+B-2
+
+Nhận kết quả trực tiếp hoặc qua liên lạc
+bằng điện thoại.
+
+B-1
+
+Lớp trưởng lập danh sách SV của lớp
+theo file mẫu, xin xác nhận của
+CVHT/GVHD, Khoa chuyên môn.
+
+B-2
+
+Nộp file mềm, kèm bản cứng có xác
+nhận về bộ phân Một cửa.
+
+B-3
+
+Nhận kết quả.
+
+B-1
+
+Làm phiếu tiếp nhận yêu cầu, cung cấp
+số điện thoại, địa chỉ gmail.
+
+Phòng CTSV
+Phòng Tài chính kế toán
+
+IV PHÒNG HÀNH CHÍNH QUẢN TRỊ
+
+43
+
+Xin cấp giấy giới thiệu đi thực tập
+
+SV đăng ký đi thực tập tại cơ quan, doanh nghiệp
+theo kế hoạch của nhà trường.
+
+V PHÒNG TÀI CHÍNH KẾ TOÁN
+44
+
+45
+
+46
+
+Xin cập nhật thêm mới, thay đổi
+tài khoản ngân hàng
+
+Đối chiếu công nợ
+
+Tiếp nhận thắc mắc chi trả học
+bổng, kinh phí hỗ trợ học tập…
+
+SV muốn cập nhật, đổi tài khoản ngân hàng trên
+trang cá nhân.
+
+SV đã nộp tiền học phí nhưng chưa được trừ công nợ
+trên trang cá nhân.
+
+SV chưa được nhận học bổng, kinh phí hỗ trợ học
+tập
+
+B-2
+
+Nhận kết quả qua email, trang học tập cá
+nhân.
+
+B-1
+
+Làm phiếu tiếp nhận yêu cầu, cung cấp
+số điện thoại, địa chỉ gmail.
+
+B-2
+
+Nộp phiếu tiếp nhận yêu cầu kèm biên
+lai nộp học phí (hoặc ảnh chụp chuyển
+khoản qua internet banking)
+
+B-3
+
+Nhận kết quả qua email, trang học tập cá
+nhân.
+
+B-1
+
+Làm phiếu tiếp nhận yêu cầu, cung cấp
+số điện thoại, địa chỉ gmail.
+
+MC-HC-01
+MC-HC-02
+
+Phòng Hành chính
+quản trị
+
+Phòng CTSV
+Khoa chuyên môn
+
+5 ngày
+
+MC-TC-01
+
+Phòng Tài chính kế
+toán
+
+Phòng CTSV
+
+5 ngày
+
+MC-TC-02
+
+Phòng Tài chính kế
+toán
+
+Phòng CTSV
+
+5 ngày
+
+MC-TC-03
+
+Phòng Tài chính kế
+toán
+
+Phòng CTSV
+
+5 ngày
+
+46
+
+Tiếp nhận thắc mắc chi trả học
+bổng, kinh phí hỗ trợ học tập…
+
+SV chưa được nhận học bổng, kinh phí hỗ trợ học
+tập
+
+MC-TC-03
+B-2
+
+Nhận kết quả trả lời trực tiếp, qua điện
+thoại, email cá nhân.
+
+Phòng Tài chính kế
+toán
+
+Phòng CTSV
+
+5 ngày
+
+
