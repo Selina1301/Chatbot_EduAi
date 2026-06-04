@@ -12,8 +12,16 @@ function assessRelevance(question, answer) {
     const questionTokens = question.toLowerCase().split(/\s+/);
     const answerTokens = answer.toLowerCase().split(/\s+/);
     
-    // Đếm số từ chính của câu hỏi xuất hiện trong câu trả lời
-    const importantKeywords = questionTokens.filter(w => w.length > 3);
+    // Danh sách các hư từ tiếng Việt phổ biến cần loại bỏ khỏi bộ lọc từ khóa chính
+    const stopwords = new Set([
+        'và', 'hoặc', 'nhưng', 'của', 'cho', 'tại', 'trong', 'để', 'này', 'kia', 
+        'đó', 'nào', 'gì', 'ai', 'đâu', 'ở', 'có', 'là', 'các', 'những', 'với', 
+        'thì', 'mà', 'sự', 'cuộc', 'việc', 'cái', 'con', 'chiếc', 'một', 'hai', 
+        'ba', 'bốn', 'năm', 'nhiều', 'ít'
+    ]);
+    
+    // Đếm số từ chính của câu hỏi xuất hiện trong câu trả lời (loại bỏ stopwords và từ quá ngắn < 2 ký tự)
+    const importantKeywords = questionTokens.filter(w => w.length >= 2 && !stopwords.has(w));
     const matchedKeywords = importantKeywords.filter(kw => 
         answerTokens.some(aw => aw.includes(kw) || kw.includes(aw))
     );

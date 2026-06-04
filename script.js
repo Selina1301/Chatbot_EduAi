@@ -205,24 +205,64 @@ async function handleSend() {
     const response = await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: text, sessionId }),
+      body: JSON.stringify({ message: text, sessionId, stream: true }),
     });
 
-    const data = await response.json();
-    removeTypingIndicator();
-
-    if (response.ok && data.reply) {
-      appendMessage(data.reply, "bot");
-      if (data.sessionId) {
-        sessionId = data.sessionId;
-        sessionStorage.setItem("uneti_session", sessionId);
-      }
-    } else {
+    if (!response.ok) {
+      const data = await response.json();
+      removeTypingIndicator();
       appendMessage(
         data.error || "Có lỗi xảy ra. Vui lòng thử lại.",
         "bot",
         true,
       );
+      setLoading(false);
+      return;
+    }
+
+    removeTypingIndicator();
+
+    // Tạo tin nhắn bot rỗng để cập nhật dữ liệu stream liên tục
+    const botRow = appendMessage("", "bot");
+    const bubble = botRow.querySelector(".msg-bubble");
+    let botMessageText = "";
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder("utf-8");
+    let buffer = "";
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split("\n");
+      buffer = lines.pop(); // giữ lại phần dư chưa hoàn thành
+
+      for (const line of lines) {
+        const cleanedLine = line.trim();
+        if (cleanedLine.startsWith("data: ")) {
+          const dataStr = cleanedLine.substring(6);
+          if (dataStr === "[DONE]") {
+            break;
+          }
+          try {
+            const data = JSON.parse(dataStr);
+            if (data.error) {
+              bubble.classList.add("error");
+              bubble.textContent = data.error;
+              scrollToBottom();
+              break;
+            } else if (data.delta) {
+              botMessageText += data.delta;
+              bubble.innerHTML = renderMarkdown(botMessageText);
+              scrollToBottom();
+            }
+          } catch (err) {
+            console.error("Lỗi phân tích cú pháp chunk:", err);
+          }
+        }
+      }
     }
   } catch (err) {
     removeTypingIndicator();
@@ -250,6 +290,10 @@ function setLoading(state) {
 function sendQuickMessage(text) {
   userInput.value = text;
   handleSend();
+  // Đóng sidebar trên thiết bị di động
+  if (window.innerWidth <= 768) {
+    closeSidebarMobile();
+  }
 }
 
 function insertTopic(text) {
@@ -259,6 +303,24 @@ function insertTopic(text) {
   // Close sidebar on mobile
   if (window.innerWidth <= 768) {
     closeSidebarMobile();
+  }
+}
+
+function toggleTopicGroup(groupId) {
+  const targetGroup = document.getElementById(groupId);
+  if (!targetGroup) return;
+
+  const isActive = targetGroup.classList.contains("active");
+
+  // Đóng tất cả các topic group khác để tạo hiệu ứng accordion chuẩn
+  const allGroups = document.querySelectorAll(".topic-group");
+  allGroups.forEach((group) => {
+    group.classList.remove("active");
+  });
+
+  // Nếu trước đó nhóm này chưa được active, hãy mở nó ra
+  if (!isActive) {
+    targetGroup.classList.add("active");
   }
 }
 

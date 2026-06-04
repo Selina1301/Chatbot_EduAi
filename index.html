@@ -43,22 +43,114 @@
 
             <nav class="topic-nav">
                 <p class="nav-label">Chủ đề hỗ trợ</p>
-                <button class="topic-btn" id="topic-hocphi" onclick="insertTopic('Học phí và cách nộp học phí năm học 2025-2026 như thế nào?')">
-                    <span class="topic-icon">💰</span>
-                    <span>Học phí & Tài chính</span>
-                </button>
-                <button class="topic-btn" id="topic-hocvu" onclick="insertTopic('Kế hoạch đào tạo và đăng ký học phần học kỳ II năm 2025-2026 như thế nào?')">
-                    <span class="topic-icon">📚</span>
-                    <span>Học vụ & Đào tạo</span>
-                </button>
-                <button class="topic-btn" id="topic-tthc" onclick="insertTopic('Hướng dẫn thủ tục xin giấy xác nhận sinh viên đang học tại trường?')">
-                    <span class="topic-icon">📋</span>
-                    <span>Thủ tục Hành chính</span>
-                </button>
-                <button class="topic-btn" id="topic-lienhe" onclick="insertTopic('Thông tin liên hệ các phòng ban của trường UNETI?')">
-                    <span class="topic-icon">📞</span>
-                    <span>Liên hệ Phòng ban</span>
-                </button>
+                
+                <!-- Nhóm 1: Học phí -->
+                <div class="topic-group" id="group-hocphi">
+                    <button class="topic-btn" onclick="toggleTopicGroup('group-hocphi')">
+                        <div class="topic-btn-left">
+                            <svg class="topic-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M12 5v14M5 12h14M12 5l-3 3M12 5l3 3M12 19l-3-3M12 19l3-3M5 12l3-3M5 12l3 3M19 12l-3-3M19 12l-3 3"/>
+                            </svg>
+                            <span class="topic-text">Học phí & Tài chính</span>
+                        </div>
+                        <span class="topic-icon">💰</span>
+                    </button>
+                    <div class="subtopics-list">
+                        <button class="subtopic-item" onclick="sendQuickMessage('Học phí năm học 2025-2026 là bao nhiêu? Cách nộp học phí như thế nào?')">
+                            <span>Mức học phí 2025-2026</span>
+                        </button>
+                        <button class="subtopic-item" onclick="sendQuickMessage('Cách nộp học phí online của trường UNETI như thế nào?')">
+                            <span>Cách nộp học phí online</span>
+                        </button>
+                        <button class="subtopic-item" onclick="sendQuickMessage('Thời hạn nộp học phí học kỳ I năm 2025-2026 là khi nào?')">
+                            <span>Thời hạn nộp học phí</span>
+                        </button>
+                        <button class="subtopic-item" onclick="sendQuickMessage('Hồ sơ thủ tục miễn giảm học phí gồm những gì?')">
+                            <span>Thủ tục miễn giảm học phí</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Nhóm 2: Học vụ -->
+                <div class="topic-group" id="group-hocvu">
+                    <button class="topic-btn" onclick="toggleTopicGroup('group-hocvu')">
+                        <div class="topic-btn-left">
+                            <svg class="topic-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M12 5v14M5 12h14M12 5l-3 3M12 5l3 3M12 19l-3-3M12 19l3-3M5 12l3-3M5 12l3 3M19 12l-3-3M19 12l-3 3"/>
+                            </svg>
+                            <span class="topic-text">Học vụ & Đào tạo</span>
+                        </div>
+                        <span class="topic-icon">📚</span>
+                    </button>
+                    <div class="subtopics-list">
+                        <button class="subtopic-item" onclick="sendQuickMessage('Kế hoạch đào tạo và đăng ký học phần học kỳ II năm 2025-2026 như thế nào?')">
+                            <span>Kế hoạch đào tạo Kỳ II</span>
+                        </button>
+                        <button class="subtopic-item" onclick="sendQuickMessage('Hướng dẫn các bước đăng ký học phần trực tuyến cho sinh viên?')">
+                            <span>Cách đăng ký học phần</span>
+                        </button>
+                        <button class="subtopic-item" onclick="sendQuickMessage('Thời gian bắt đầu học kỳ mới và lịch học như thế nào?')">
+                            <span>Lịch học kỳ mới</span>
+                        </button>
+                        <button class="subtopic-item" onclick="sendQuickMessage('Điều kiện xét công nhận tốt nghiệp đại học chính quy là gì?')">
+                            <span>Điều kiện tốt nghiệp</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Nhóm 3: Thủ tục -->
+                <div class="topic-group" id="group-tthc">
+                    <button class="topic-btn" onclick="toggleTopicGroup('group-tthc')">
+                        <div class="topic-btn-left">
+                            <svg class="topic-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M12 5v14M5 12h14M12 5l-3 3M12 5l3 3M12 19l-3-3M12 19l3-3M5 12l3-3M5 12l3 3M19 12l-3-3M19 12l-3 3"/>
+                            </svg>
+                            <span class="topic-text">Thủ tục Hành chính</span>
+                        </div>
+                        <span class="topic-icon">📋</span>
+                    </button>
+                    <div class="subtopics-list">
+                        <button class="subtopic-item" onclick="sendQuickMessage('Hướng dẫn thủ tục xin giấy xác nhận sinh viên đang học tại trường?')">
+                            <span>Xin giấy xác nhận SV</span>
+                        </button>
+                        <button class="subtopic-item" onclick="sendQuickMessage('Thủ tục xin bảo lưu kết quả học tập gồm những bước nào?')">
+                            <span>Thủ tục bảo lưu học tập</span>
+                        </button>
+                        <button class="subtopic-item" onclick="sendQuickMessage('Hồ sơ xin thôi học hoặc chuyển trường cần những giấy tờ gì?')">
+                            <span>Chuyển trường, thôi học</span>
+                        </button>
+                        <button class="subtopic-item" onclick="sendQuickMessage('Thủ tục đăng ký làm thẻ BHYT sinh viên như thế nào?')">
+                            <span>Đăng ký thẻ BHYT SV</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Nhóm 4: Liên hệ -->
+                <div class="topic-group" id="group-lienhe">
+                    <button class="topic-btn" onclick="toggleTopicGroup('group-lienhe')">
+                        <div class="topic-btn-left">
+                            <svg class="topic-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M12 5v14M5 12h14M12 5l-3 3M12 5l3 3M12 19l-3-3M12 19l3-3M5 12l3-3M5 12l3 3M19 12l-3-3M19 12l-3 3"/>
+                            </svg>
+                            <span class="topic-text">Liên hệ Phòng ban</span>
+                        </div>
+                        <span class="topic-icon">📞</span>
+                    </button>
+                    <div class="subtopics-list">
+                        <button class="subtopic-item" onclick="sendQuickMessage('Thông tin liên hệ phòng Công tác Sinh viên (số điện thoại, email)?')">
+                            <span>Phòng Công tác SV (CTSV)</span>
+                        </button>
+                        <button class="subtopic-item" onclick="sendQuickMessage('Thông tin liên hệ phòng Đào tạo và quản lý học vụ?')">
+                            <span>Phòng Đào tạo (Học vụ)</span>
+                        </button>
+                        <button class="subtopic-item" onclick="sendQuickMessage('Thông tin liên hệ phòng Tài chính (đóng học phí, miễn giảm)?')">
+                            <span>Phòng Tài chính (Học phí)</span>
+                        </button>
+                        <button class="subtopic-item" onclick="sendQuickMessage('Địa chỉ chi tiết các cơ sở đào tạo của trường UNETI?')">
+                            <span>Các cơ sở của trường UNETI</span>
+                        </button>
+                    </div>
+                </div>
             </nav>
 
             <div class="sidebar-footer">

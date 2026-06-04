@@ -6,26 +6,65 @@
 
 const { addQA, loadKnowledgeBase } = require('./knowledge_manager');
 
-// Xác định category dựa trên nội dung câu hỏi
+// Xác định category dựa trên nội dung câu hỏi (sử dụng hệ thống chấm điểm theo trọng số)
 function categorizeQuestion(question) {
     const lower = question.toLowerCase();
     
-    if (lower.includes('học phí') || lower.includes('nộp') || lower.includes('tài chính') || lower.includes('tiền')) {
-        return 'học phí';
+    const categories = {
+        'học phí': {
+            keywords: ['học phí', 'nộp học phí', 'tiền học', 'tài chính', 'miễn giảm học phí', 'đóng học phí', 'biên lai', 'mức thu', 'nộp tiền'],
+            score: 0
+        },
+        'đào tạo': {
+            keywords: ['đào tạo', 'học phần', 'đăng ký', 'lịch học', 'thời khóa biểu', 'tín chỉ', 'hủy học phần', 'kế hoạch học', 'tốt nghiệp', 'lịch thi'],
+            score: 0
+        },
+        'thủ tục': {
+            keywords: ['thủ tục', 'giấy tờ', 'xin giấy', 'bảo lưu', 'thôi học', 'chuyển trường', 'rút hồ sơ', 'đơn xin', 'xác nhận sinh viên', 'bhyt', 'thẻ sinh viên', 'miễn giảm'],
+            score: 0
+        },
+        'liên hệ': {
+            keywords: ['liên hệ', 'phòng ban', 'địa chỉ', 'điện thoại', 'email', 'số điện thoại', 'cơ sở', 'văn phòng', 'hotline', 'gặp ai', 'ở đâu'],
+            score: 0
+        },
+        'giảng viên': {
+            keywords: ['giảng viên', 'cán bộ', 'thầy', 'cô', 'danh sách giảng viên', 'trình độ', 'chuyên ngành', 'dạy môn', 'khoa'],
+            score: 0
+        }
+    };
+    
+    let maxScore = 0;
+    let bestCategory = 'general';
+    
+    for (const [catName, catData] of Object.entries(categories)) {
+        let score = 0;
+        for (const keyword of catData.keywords) {
+            // Escape special regex characters
+            const escapedKeyword = keyword.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+            const regex = new RegExp(escapedKeyword, 'gi');
+            const matches = lower.match(regex);
+            if (matches) {
+                score += matches.length * 3; // Trọng số từ khóa chính xác
+            }
+        }
+        
+        // Thêm điểm nếu có từ đơn lẻ tương ứng trong các từ phân tách
+        const words = lower.split(/\s+/);
+        catData.keywords.forEach(kw => {
+            if (!kw.includes(' ')) { // Chỉ xét từ đơn
+                if (words.includes(kw)) {
+                    score += 1;
+                }
+            }
+        });
+        
+        if (score > maxScore) {
+            maxScore = score;
+            bestCategory = catName;
+        }
     }
-    if (lower.includes('đào tạo') || lower.includes('học phần') || lower.includes('đăng ký') || lower.includes('lịch')) {
-        return 'đào tạo';
-    }
-    if (lower.includes('thủ tục') || lower.includes('giấy') || lower.includes('xin') || lower.includes('đơn')) {
-        return 'thủ tục';
-    }
-    if (lower.includes('liên hệ') || lower.includes('phòng ban') || lower.includes('địa chỉ') || lower.includes('điện thoại')) {
-        return 'liên hệ';
-    }
-    if (lower.includes('giảng viên') || lower.includes('cán bộ')) {
-        return 'giảng viên';
-    }
-    return 'general';
+    
+    return bestCategory;
 }
 
 // Kiểm tra xem câu trả lời có giá trị học tập không
@@ -34,10 +73,27 @@ function isValidAnswer(answer) {
     // Loại bỏ những câu trả lời quá ngắn
     if (answer.length < 30) return false;
     
+    const lower = answer.toLowerCase();
+    
     // Loại bỏ những câu trả lời chỉ nói "liên hệ phòng ban"
-    if (answer.toLowerCase().includes('xin lỗi') && 
-        answer.toLowerCase().includes('chưa có') && 
-        answer.length < 100) {
+    if (lower.includes('xin lỗi') && lower.includes('chưa có') && answer.length < 100) {
+        return false;
+    }
+    
+    // Loại bỏ câu trả lời tiêu cực, thiếu tài liệu, không có thông tin
+    const negativeKeywords = [
+        'không có thông tin',
+        'không đề cập',
+        'thiếu tài liệu',
+        'thiếu thông tin',
+        'không tìm thấy',
+        'hiện tại không hỗ trợ',
+        'không tự bịa',
+        'tài liệu hiện tại không',
+        'tài liệu không có'
+    ];
+    
+    if (negativeKeywords.some(kw => lower.includes(kw))) {
         return false;
     }
     
@@ -62,7 +118,7 @@ function autoLearnQA(userMessage, geminiResponse) {
 
         // Kiểm tra xem đã có câu tương tự chưa
         const knowledgeBaseQA = loadKnowledgeBase();
-        if (isDuplicate(userMessage, knowledgeBaseQA, 0.75)) {
+        if (isDuplicate(userMessage, knowledgeBaseQA, 0.65)) {
             console.log('⏭️  Câu hỏi tương tự đã tồn tại, bỏ qua learning');
             return false;
         }

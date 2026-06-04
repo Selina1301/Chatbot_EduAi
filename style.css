@@ -193,10 +193,17 @@ html, body {
     padding-left: 4px;
 }
 
+.topic-group {
+    margin-bottom: 6px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
 .topic-btn {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Đẩy icon/emoji sang bên phải */
     gap: 12px;
     padding: 12px 14px;
     border: 1px solid transparent;
@@ -209,7 +216,12 @@ html, body {
     cursor: pointer;
     transition: var(--transition);
     text-align: left;
-    margin-bottom: 4px;
+}
+
+.topic-btn-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .topic-btn:hover {
@@ -219,9 +231,68 @@ html, body {
     transform: translateX(4px);
 }
 
+.topic-arrow-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--text-muted);
+    transition: transform 0.3s ease, color 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* Xoay mũi tên 4 hướng 45 độ và đổi màu khi active */
+.topic-group.active .topic-arrow-icon {
+    transform: rotate(45deg);
+    color: var(--uneti-orange-light);
+}
+
+.topic-group.active .topic-btn {
+    background: rgba(28,86,164,0.15);
+    border-color: var(--glass-border2);
+    color: var(--text-primary);
+}
+
 .topic-icon {
     font-size: 1.1rem;
     flex-shrink: 0;
+}
+
+/* Subtopics container */
+.subtopics-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.topic-group.active .subtopics-list {
+    max-height: 250px; /* Đủ rộng cho 4 subtopics */
+    padding: 6px 8px 10px 14px;
+}
+
+/* Subtopic items style */
+.subtopic-item {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-left: 2px solid var(--glass-border);
+    padding: 8px 12px;
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition);
+}
+
+.subtopic-item:hover {
+    color: var(--uneti-orange-light);
+    border-left-color: var(--uneti-orange-light);
+    background: rgba(255, 255, 255, 0.02);
+    padding-left: 16px;
 }
 
 /* Sidebar Footer */

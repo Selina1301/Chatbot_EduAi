@@ -79,14 +79,14 @@ Gemini trả lời → Kiểm tra câu trả lời → Lưu vào KB
 ## 📁 Các File Được Tạo/Sửa
 
 | File | Status | Mô Tả |
-|------|--------|-------|
-| `knowledge_manager.js` | ✨ NEW | Quản lý KB: load, save, tìm, update |
-| `similarity_engine.js` | ✨ NEW | Tính toán độ tương đồng (Cosine Similarity) |
-| `learning_module.js` | ✨ NEW | Tự động học + phân loại category |
-| `server.js` | 🔄 UPDATED | Tích hợp KB + similarity search + auto-learn |
-| `dashboard.html` | ✨ NEW | Dashboard theo dõi thống kê hệ thống |
-| `storage/knowledge_base.json` | ✨ NEW | Database Q&A (được tạo tự động) |
-| `LEARNING_SYSTEM_README.md` | ✨ NEW | Hướng dẫn chi tiết |
+|-------------------------------|-------------|----------------------------------------------|
+| `knowledge_manager.js`        | ✨ NEW      | Quản lý KB: load, save, tìm, update |
+| `similarity_engine.js`        | ✨ NEW      | Tính toán độ tương đồng (Cosine Similarity) |
+| `learning_module.js`          | ✨ NEW      | Tự động học + phân loại category |
+| `server.js`                   | 🔄 UPDATED  | Tích hợp KB + similarity search + auto-learn |
+| `dashboard.html`              | ✨ NEW      | Dashboard theo dõi thống kê hệ thống |
+| `storage/knowledge_base.json` | ✨ NEW      | Database Q&A (được tạo tự động) |
+| `LEARNING_SYSTEM_README.md`   | ✨ NEW      | Hướng dẫn chi tiết |
 
 ---
 

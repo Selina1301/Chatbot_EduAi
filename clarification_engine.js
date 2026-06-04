@@ -7,10 +7,19 @@
 // Phát hiện câu hỏi mơ hồ
 function detectAmbiguity(question) {
     const ambiguityIndicators = [];
+    const lower = question.toLowerCase();
     
-    // 1. Câu hỏi quá ngắn (< 3 từ)
+    // Kiểm tra xem câu hỏi có chứa các chủ đề học vụ cốt lõi không
+    const hasCoreSubject = lower.includes('học phí') || lower.includes('đăng ký') || 
+                           lower.includes('học phần') || lower.includes('lịch học') || 
+                           lower.includes('bảo lưu') || lower.includes('thôi học') || 
+                           lower.includes('giấy xác nhận') || lower.includes('giảng viên') ||
+                           lower.includes('liên hệ') || lower.includes('phòng ban') ||
+                           lower.includes('thời khóa biểu') || lower.includes('lịch thi');
+
+    // 1. Câu hỏi quá ngắn (< 3 từ) và không chứa chủ đề cốt lõi
     const wordCount = question.split(/\s+/).length;
-    if (wordCount < 3) {
+    if (wordCount < 3 && !hasCoreSubject) {
         ambiguityIndicators.push({
             type: 'TOO_SHORT',
             confidence: 0.5,
@@ -18,65 +27,44 @@ function detectAmbiguity(question) {
         });
     }
     
-    // 2. Có các đại từ mơ hồ (cái này, cái kia, nó, chúng nó, ...)
-    if (/\b(cái này|cái kia|nó|chúng nó|nó là|cái gì|gì|cái)\b/i.test(question)) {
+    // 2. Có các đại từ mơ hồ (cái này, cái kia, nó, chúng nó, ...) mà không có ngữ cảnh cụ thể
+    if (/\b(cái này|cái kia|nó|chúng nó|nó là)\b/i.test(question) && !hasCoreSubject) {
         ambiguityIndicators.push({
             type: 'AMBIGUOUS_PRONOUN',
-            confidence: 0.5,
-            message: 'Câu hỏi chứa đại từ mơ hồ'
+            confidence: 0.6,
+            message: 'Câu hỏi chứa đại từ mơ hồ và thiếu chủ đề xác định'
         });
     }
     
-    // 3. Câu hỏi có nhiều chủ đề (AND, hoặc, hay)
-    const multiTopicMatches = question.match(/\s+(và|hoặc|hay|cũng như)\s+/g) || [];
-    if (multiTopicMatches.length > 1) {
+    // 3. Câu hỏi có quá nhiều chủ đề chéo nhau gây nhiễu
+    const topicKeywords = ['học phí', 'lịch học', 'thủ tục', 'giảng viên', 'liên hệ'];
+    const matchedTopics = topicKeywords.filter(topic => lower.includes(topic));
+    if (matchedTopics.length >= 3) {
         ambiguityIndicators.push({
             type: 'MULTIPLE_TOPICS',
-            confidence: 0.6,
-            message: `Câu hỏi có ${multiTopicMatches.length + 1} chủ đề khác nhau`
+            confidence: 0.7,
+            message: `Câu hỏi chứa quá nhiều chủ đề chéo nhau (${matchedTopics.join(', ')})`
         });
     }
     
-    // 4. Câu hỏi chứa các từ không xác định (cái gì, ai, where, when)
-    if (/\b(ai|cái gì|gì|đâu|khi nào|lúc nào|sao|tại sao|như thế nào|thế nào)\b/i.test(question)) {
-        // Đây không phải mơ hồ nếu đó là câu hỏi Wh-word chính
-        if (!/^\s*(ai|gì|đâu|khi nào|lúc nào|sao|tại sao|như thế nào|thế nào)/i.test(question)) {
-            ambiguityIndicators.push({
-                type: 'VAGUE_REFERENCE',
-                confidence: 0.6,
-                message: 'Câu hỏi có tham chiếu không rõ ràng'
-            });
-        }
-    }
-    
-    // 5. Câu hỏi chứa từ chỉ mức độ không xác định (khoảng, gần, chừng, tầm, ...)
-    if (/\b(khoảng|gần|chừng|tầm|xấp xỉ|khoảng chừng|mấy|bao nhiêu|đến)\b/i.test(question)) {
-        // Nếu đó là số lượng, thì không phải mơ hồ
-        if (!/\bđến\s+\d+|khoảng\s+\d+|tầm\s+\d+/i.test(question)) {
-            ambiguityIndicators.push({
-                type: 'VAGUE_QUANTITY',
-                confidence: 0.5,
-                message: 'Câu hỏi sử dụng chỉ số không chính xác'
-            });
-        }
-    }
-    
-    // 6. Câu hỏi có từ "để" (có thể là nguyên nhân hoặc mục đích)
-    if (/\bđể\b/i.test(question) && question.length > 30) {
+    // 4. Câu hỏi có Wh-word nhưng hoàn toàn thiếu ngữ cảnh cụ thể
+    if (/\b(cái gì|gì|ở đâu|lúc nào|như thế nào|thế nào)\b/i.test(question) && !hasCoreSubject) {
         ambiguityIndicators.push({
-            type: 'PURPOSE_AMBIGUITY',
+            type: 'VAGUE_REFERENCE',
             confidence: 0.5,
-            message: 'Câu hỏi có thể có nhiều mục đích khác nhau'
+            message: 'Câu hỏi có Wh-word nhưng không chứa chủ đề học vụ xác định'
         });
     }
     
+    const totalScore = ambiguityIndicators.reduce((sum, a) => sum + a.confidence, 0);
+    const ambiguityScore = Math.min(totalScore, 1.0);
+    const severity = ambiguityScore >= 0.8 ? 'HIGH' : (ambiguityScore >= 0.5 ? 'MEDIUM' : 'NONE');
+
     return {
         isAmbiguous: ambiguityIndicators.length > 0,
-        ambiguityScore: Math.min(ambiguityIndicators.reduce((sum, a) => sum + a.confidence, 0) / Math.max(ambiguityIndicators.length, 1), 1.0),
+        ambiguityScore,
         indicators: ambiguityIndicators,
-        severity: ambiguityIndicators.length > 0 
-            ? (ambiguityIndicators.reduce((sum, a) => sum + a.confidence, 0) / ambiguityIndicators.length > 0.7 ? 'HIGH' : 'MEDIUM')
-            : 'NONE'
+        severity
     };
 }
 
@@ -141,8 +129,8 @@ function generateClarifyingQuestions(question, detectedAmbiguities) {
 
 // Đánh giá liệu câu hỏi có cần làm rõ không
 function shouldAskClarification(ambiguityScore, severity) {
-    // Nếu ambiguity score > 0.8, mới nên hỏi để tránh spam
-    return ambiguityScore > 0.8;
+    // Kích hoạt khi độ mơ hồ cao (từ 0.8 trở lên) để tránh spam câu hỏi thông thường
+    return severity === 'HIGH' || ambiguityScore >= 0.8;
 }
 
 // Tạo response làm rõ (gửi cho user)
