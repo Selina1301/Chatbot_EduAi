@@ -13,6 +13,52 @@ let chunksCache = [];
 let idfCache = {};
 let defaultIDF = 0;
 
+// Load department structure to map lecturers to departments
+let khoaStructure = [];
+const structurePath = path.join(__dirname, 'assets', 'inF Giảng Viên', 'khoa_structure.json');
+if (fs.existsSync(structurePath)) {
+    try {
+        khoaStructure = JSON.parse(fs.readFileSync(structurePath, 'utf-8'));
+        console.log(`📂 RAG Engine: Đã tải sơ đồ cấu trúc khoa từ khoa_structure.json (${khoaStructure.length} khoa)`);
+    } catch (e) {
+        console.error('Lỗi đọc file khoa_structure.json:', e.message);
+    }
+}
+
+function getDepartmentByMajor(majorName) {
+    if (!majorName) return '';
+    const cleanMajor = majorName.replace(/^Ngành\s+/i, '').trim().toLowerCase();
+    
+    // 1. Try to find in structure mapping
+    for (const dept of khoaStructure) {
+        for (const major of dept.majors) {
+            const cleanDeptMajor = major.replace(/^Ngành\s+/i, '').trim().toLowerCase();
+            if (cleanMajor === cleanDeptMajor || cleanMajor.includes(cleanDeptMajor) || cleanDeptMajor.includes(cleanMajor)) {
+                return dept.name;
+            }
+        }
+    }
+    
+    // 2. Fallbacks
+    if (cleanMajor.includes('kế toán') || cleanMajor.includes('kiểm toán')) return 'Khoa Kế toán Kiểm toán';
+    if (cleanMajor.includes('quản trị') || cleanMajor.includes('marketing')) return 'Khoa Quản trị & Marketing';
+    if (cleanMajor.includes('tài chính') || cleanMajor.includes('ngân hàng') || cleanMajor.includes('bảo hiểm')) return 'Khoa Tài chính - Ngân hàng và Bảo hiểm';
+    if (cleanMajor.includes('thương mại') || cleanMajor.includes('logistics') || cleanMajor.includes('logistic')) return 'Khoa Thương mại';
+    if (cleanMajor.includes('cơ khí') || cleanMajor.includes('ô tô') || cleanMajor.includes('cơ điện tử')) return 'Khoa Cơ khí';
+    if (cleanMajor.includes('điện tử') || cleanMajor.includes('viễn thông') || cleanMajor.includes('kỹ thuật mt') || cleanMajor.includes('máy tính')) {
+        if (cleanMajor.includes('mạng máy tính')) return 'Khoa Công nghệ thông tin';
+        return 'Khoa Điện tử và Kỹ thuật máy tính';
+    }
+    if (cleanMajor.includes('điện') || cleanMajor.includes('tự động')) return 'Khoa Điện - Tự động hóa';
+    if (cleanMajor.includes('dệt') || cleanMajor.includes('may') || cleanMajor.includes('sợi')) return 'Khoa Dệt may và Thời trang';
+    if (cleanMajor.includes('thực phẩm')) return 'Khoa Công nghệ thực phẩm';
+    if (cleanMajor.includes('thông tin') || cleanMajor.includes('dữ liệu')) return 'Khoa Công nghệ thông tin';
+    if (cleanMajor.includes('du lịch') || cleanMajor.includes('lữ hành') || cleanMajor.includes('khách sạn')) return 'Khoa Du lịch và Khách sạn';
+    if (cleanMajor.includes('ngoại ngữ') || cleanMajor.includes('tiếng anh') || cleanMajor.includes('ngôn ngữ anh')) return 'Khoa Ngoại ngữ';
+    
+    return '';
+}
+
 // Khởi tạo RAG và lập chỉ mục các chunks
 function initRAG() {
     console.log('🔍 Khởi tạo RAG Engine - Đang cắt nhỏ tài liệu...');
@@ -27,23 +73,106 @@ function initRAG() {
 
     for (const file of files) {
         const filePath = path.join(DATA_DIR, file);
-        const content = fs.readFileSync(filePath, 'utf-8');
+        let content = fs.readFileSync(filePath, 'utf-8');
         const fileLabel = file.replace(/_/g, ' ').replace('.txt', '').toUpperCase();
         
-        // Chia tài liệu theo 2 ký tự xuống dòng liên tiếp (paragraphs)
-        const rawParagraphs = content.split(/\r?\n\s*\r?\n/);
-        
-        for (const para of rawParagraphs) {
-            const trimmed = para.trim();
-            // Bỏ qua các dòng trống hoặc quá ngắn (dưới 40 ký tự) không chứa đủ thông tin
-            if (trimmed.length < 40) continue;
+        if (file === 'giang_vien_info.txt') {
+            // Xử lý riêng cho file danh sách giảng viên để tránh lỗi chia nhỏ dòng ngắn bị bỏ sót
+            content = content.replace(/\f/g, ''); // Loại bỏ các ký tự phân trang Form Feed
+            const lines = content.split(/\r?\n/).map(l => l.trim()).filter(l => l.length > 0);
             
-            allChunks.push({
-                id: chunkId++,
-                source: fileLabel,
-                content: trimmed,
-                tokens: normalizeAndTokenize(trimmed)
-            });
+            let i = 0;
+            // 1. Duyệt qua Phần A (thông tin chung)
+            while (i < lines.length && !lines[i].includes('B. Công khai thông tin')) {
+                if (lines[i].length >= 40) {
+                    allChunks.push({
+                        id: chunkId++,
+                        source: fileLabel,
+                        content: lines[i],
+                        tokens: normalizeAndTokenize(lines[i])
+                    });
+                }
+                i++;
+            }
+            
+            // 2. Duyệt qua Phần B (danh sách giảng viên chi tiết)
+            while (i < lines.length) {
+                const line = lines[i];
+                const matchRecordStart = line.match(/^(\d+)(?:\s+(.+))?$/);
+                
+                if (matchRecordStart) {
+                    const stt = matchRecordStart[1];
+                    const nameInStart = matchRecordStart[2];
+                    
+                    if (nameInStart) {
+                        // Kỷ lục 6 dòng (STT và Tên trên cùng dòng)
+                        const name = nameInStart.trim();
+                        const birthYear = lines[i + 1] || '';
+                        const gender = lines[i + 2] || '';
+                        const title = lines[i + 3] || '';
+                        const degree = lines[i + 4] || '';
+                        const subject = lines[i + 5] || '';
+                        
+                        const deptName = getDepartmentByMajor(subject);
+                        const deptInfo = deptName ? ` thuộc ${deptName}` : '';
+                        const lecturerText = `Giảng viên ${name}${deptInfo}, sinh năm ${birthYear}, giới tính ${gender}, chức danh ${title}, trình độ đào tạo ${degree}, chuyên ngành giảng dạy ${subject}.`;
+                        allChunks.push({
+                            id: chunkId++,
+                            source: fileLabel,
+                            content: lecturerText,
+                            tokens: normalizeAndTokenize(lecturerText)
+                        });
+                        i += 6;
+                        continue;
+                    } else {
+                        // Kỷ lục 7 dòng (STT riêng, Tên dòng kế tiếp)
+                        const name = lines[i + 1] || '';
+                        const birthYear = lines[i + 2] || '';
+                        const gender = lines[i + 3] || '';
+                        const title = lines[i + 4] || '';
+                        const degree = lines[i + 5] || '';
+                        const subject = lines[i + 6] || '';
+                        
+                        const deptName = getDepartmentByMajor(subject);
+                        const deptInfo = deptName ? ` thuộc ${deptName}` : '';
+                        const lecturerText = `Giảng viên ${name}${deptInfo}, sinh năm ${birthYear}, giới tính ${gender}, chức danh ${title}, trình độ đào tạo ${degree}, chuyên ngành giảng dạy ${subject}.`;
+                        allChunks.push({
+                            id: chunkId++,
+                            source: fileLabel,
+                            content: lecturerText,
+                            tokens: normalizeAndTokenize(lecturerText)
+                        });
+                        i += 7;
+                        continue;
+                    }
+                }
+                
+                // Nếu là tiêu đề khối ngành hoặc mô tả chung dài thì giữ lại
+                if (line.length >= 40) {
+                    allChunks.push({
+                        id: chunkId++,
+                        source: fileLabel,
+                        content: line,
+                        tokens: normalizeAndTokenize(line)
+                    });
+                }
+                i++;
+            }
+        } else {
+            // Chia tài liệu mặc định cho các file khác theo 2 ký tự xuống dòng liên tiếp (paragraphs)
+            const rawParagraphs = content.split(/\r?\n\s*\r?\n/);
+            
+            for (const para of rawParagraphs) {
+                const trimmed = para.trim();
+                if (trimmed.length < 40) continue;
+                
+                allChunks.push({
+                    id: chunkId++,
+                    source: fileLabel,
+                    content: trimmed,
+                    tokens: normalizeAndTokenize(trimmed)
+                });
+            }
         }
     }
     
@@ -66,6 +195,16 @@ function initRAG() {
     chunksCache = allChunks;
     idfCache = idf;
     defaultIDF = Math.log(1 + N / 1); // default IDF cho từ mới không có trong tài liệu
+    
+    // 3. Tính toán trước vector TF-IDF cho từng chunk
+    for (const chunk of chunksCache) {
+        const chunkTF = createTFVector(chunk.tokens);
+        const chunkVector = {};
+        for (const word of Object.keys(chunkTF)) {
+            chunkVector[word] = chunkTF[word] * (idfCache[word] || defaultIDF);
+        }
+        chunk.vector = chunkVector;
+    }
     
     console.log(`✅ RAG Engine: Đã lập chỉ mục ${chunksCache.length} đoạn tài liệu từ ${files.length} file.`);
 }
@@ -96,15 +235,18 @@ function retrieveRelevantChunks(userMessage, limit = 3, threshold = 0.05) {
         userVector[word] = userTF[word] * getIDF(word);
     }
     
-    // Tính toán độ tương đồng với tất cả các chunks
+    // Tính toán độ tương đồng với tất cả các chunks (sử dụng vector đã tính sẵn trong cache)
     const scoredChunks = chunksCache.map(chunk => {
-        const chunkTF = createTFVector(chunk.tokens);
-        const chunkVector = {};
-        for (const word of Object.keys(chunkTF)) {
-            chunkVector[word] = chunkTF[word] * getIDF(word);
+        let score = cosineSimilarity(userVector, chunk.vector);
+        
+        // Tăng trọng số (boost) cho tài liệu thông tin khoa nếu câu hỏi có các từ khóa liên quan đến khoa/ngành/sơ đồ
+        if (chunk.source === 'DEPARTMENTS INFO') {
+            const lowerMsg = userMessage.toLowerCase();
+            if (lowerMsg.includes('khoa') || lowerMsg.includes('ngành') || lowerMsg.includes('nganh') || lowerMsg.includes('sơ đồ') || lowerMsg.includes('so do') || lowerMsg.includes('tổ chức') || lowerMsg.includes('to chuc')) {
+                score *= 1.8; // Tăng đáng kể để thông tin Khoa nổi lên trước danh sách giảng viên
+            }
         }
         
-        const score = cosineSimilarity(userVector, chunkVector);
         return { 
             source: chunk.source,
             content: chunk.content,

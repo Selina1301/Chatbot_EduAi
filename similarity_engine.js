@@ -4,14 +4,35 @@
  * Kết quả khớp được duyệt trực tiếp trên tập dữ liệu.
  */
 
-// Chuẩn hóa và tách từ (tokenizer) - Hỗ trợ tiếng Việt tốt hơn
+// Chuẩn hóa và tách từ (tokenizer) - Hỗ trợ tiếng Việt tốt hơn (cả có dấu và không dấu)
+function removeDiacritics(str) {
+    if (!str) return '';
+    return str
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/đ/g, 'd')
+        .replace(/Đ/g, 'D');
+}
+
 function normalizeAndTokenize(text) {
     if (!text) return [];
-    return text
-        .toLowerCase()
-        .replace(/[^\w\sàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/g, ' ') // Loại bỏ dấu câu nhưng giữ ký tự tiếng Việt
+    const cleanText = text.toLowerCase();
+    const noDiacritics = removeDiacritics(cleanText);
+    
+    // Tách từ có dấu
+    const tokensWithAccents = cleanText
+        .replace(/[^\w\sàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/g, ' ')
         .split(/\s+/)
-        .filter(word => word.length > 1); // Giữ các từ từ 2 ký tự trở lên (quan trọng cho tiếng Việt như: ký, kỳ, hệ, lệ, số, thi)
+        .filter(word => word.length > 1);
+        
+    // Tách từ không dấu
+    const tokensNoAccents = noDiacritics
+        .replace(/[^\w\s]/g, ' ')
+        .split(/\s+/)
+        .filter(word => word.length > 1);
+        
+    // Gộp cả 2 để đảm bảo truy vấn không dấu vẫn khớp chính xác dữ liệu có dấu
+    return Array.from(new Set([...tokensWithAccents, ...tokensNoAccents]));
 }
 
 // Tạo vector tần số từ (TF - Term Frequency)

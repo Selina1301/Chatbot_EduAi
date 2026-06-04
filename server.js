@@ -150,7 +150,7 @@ async function callAIChat(messages) {
 
 app.post('/api/chat', async (req, res) => {
     try {
-        const { message, sessionId, stream } = req.body;
+        const { message, sessionId } = req.body;
 
         if (!message) {
             return res.status(400).json({ error: 'Tin nhắn không hợp lệ' });
@@ -168,40 +168,18 @@ app.post('/api/chat', async (req, res) => {
             const clarifyingQuestions = generateClarifyingQuestions(message, ambiguityAnalysis);
             const clarificationResponse = createClarificationResponse(message, clarifyingQuestions);
             
-            if (stream) {
-                res.setHeader('Content-Type', 'text/event-stream');
-                res.setHeader('Cache-Control', 'no-cache');
-                res.setHeader('Connection', 'keep-alive');
-                
-                res.write(`data: ${JSON.stringify({ 
-                    source: 'clarification',
-                    needsClarification: true,
-                    clarifyingQuestions: clarifyingQuestions
-                })}\n\n`);
-                
-                // Stream từng từ của câu trả lời làm rõ
-                const words = clarificationResponse.split(' ');
-                for (let i = 0; i < words.length; i++) {
-                    const chunk = words[i] + (i === words.length - 1 ? '' : ' ');
-                    res.write(`data: ${JSON.stringify({ delta: chunk })}\n\n`);
-                    await new Promise(resolve => setTimeout(resolve, 15));
-                }
-                res.write('data: [DONE]\n\n');
-                return res.end();
-            } else {
-                return res.json({
-                    reply: clarificationResponse,
-                    sessionId: sid,
-                    source: 'clarification',
-                    needsClarification: true,
-                    clarifyingQuestions: clarifyingQuestions
-                });
-            }
+            return res.json({
+                reply: clarificationResponse,
+                sessionId: sid,
+                source: 'clarification',
+                needsClarification: true,
+                clarifyingQuestions: clarifyingQuestions
+            });
         }
 
         // ✅ STEP 1: Kiểm tra Knowledge Base (Similarity Search)
         console.log('🔍 Đang tìm kiếm trong Knowledge Base...');
-        const similarQA = findSimilarAnswer(message, 0.6);
+        const similarQA = findSimilarAnswer(message, 0.8);
         
         if (similarQA) {
             console.log(`✅ Tìm thấy câu tương tự (độ trùng: ${(similarQA.similarity * 100).toFixed(1)}%)`);
@@ -212,35 +190,13 @@ app.post('/api/chat', async (req, res) => {
             
             const qualityReport = generateQualityReport(message, similarQA.answer);
             
-            if (stream) {
-                res.setHeader('Content-Type', 'text/event-stream');
-                res.setHeader('Cache-Control', 'no-cache');
-                res.setHeader('Connection', 'keep-alive');
-                
-                res.write(`data: ${JSON.stringify({ 
-                    source: 'knowledge_base', 
-                    similarity: (similarQA.similarity * 100).toFixed(1),
-                    quality: qualityReport 
-                })}\n\n`);
-                
-                // Giả lập stream chữ chạy cho các câu trả lời cached
-                const words = similarQA.answer.split(' ');
-                for (let i = 0; i < words.length; i++) {
-                    const chunk = words[i] + (i === words.length - 1 ? '' : ' ');
-                    res.write(`data: ${JSON.stringify({ delta: chunk })}\n\n`);
-                    await new Promise(resolve => setTimeout(resolve, 20));
-                }
-                res.write('data: [DONE]\n\n');
-                return res.end();
-            } else {
-                return res.json({ 
-                    reply: similarQA.answer, 
-                    sessionId: sid,
-                    source: 'knowledge_base',
-                    similarity: (similarQA.similarity * 100).toFixed(1),
-                    quality: qualityReport
-                });
-            }
+            return res.json({ 
+                reply: similarQA.answer, 
+                sessionId: sid,
+                source: 'knowledge_base',
+                similarity: (similarQA.similarity * 100).toFixed(1),
+                quality: qualityReport
+            });
         }
 
         // ✅ STEP 2: Truy vấn RAG cục bộ để lấy ngữ cảnh tối ưu
@@ -309,49 +265,17 @@ app.post('/api/chat', async (req, res) => {
 
         console.log(`✅ [Bot]: Trả lời thành công (${reply.length} ký tự)`);
 
-        if (stream) {
-            res.setHeader('Content-Type', 'text/event-stream');
-            res.setHeader('Cache-Control', 'no-cache');
-            res.setHeader('Connection', 'keep-alive');
-            
-            res.write(`data: ${JSON.stringify({ 
-                source: 'ai_api', 
-                learned: !!learned,
-                quality: qualityReport,
-                improvementAttempts: attemptCount 
-            })}\n\n`);
-            
-            // Stream từng từ cho client
-            const words = reply.split(' ');
-            for (let i = 0; i < words.length; i++) {
-                const chunk = words[i] + (i === words.length - 1 ? '' : ' ');
-                res.write(`data: ${JSON.stringify({ delta: chunk })}\n\n`);
-                await new Promise(resolve => setTimeout(resolve, 15));
-            }
-            res.write('data: [DONE]\n\n');
-            return res.end();
-        } else {
-            return res.json({ 
-                reply, 
-                sessionId: sid,
-                source: 'ai_api',
-                learned: !!learned,
-                quality: qualityReport,
-                improvementAttempts: attemptCount
-            });
-        }
+        return res.json({ 
+            reply, 
+            sessionId: sid,
+            source: 'ai_api',
+            learned: !!learned,
+            quality: qualityReport,
+            improvementAttempts: attemptCount
+        });
 
     } catch (error) {
         console.error('❌ Lỗi xử lý:', error);
-        if (res.headersSent) {
-            try {
-                res.write(`data: ${JSON.stringify({ error: 'Có lỗi xảy ra trên máy chủ trong quá trình truyền dữ liệu.' })}\n\n`);
-                res.write('data: [DONE]\n\n');
-            } catch (streamErr) {
-                console.error('❌ Không thể gửi lỗi qua stream:', streamErr);
-            }
-            return res.end();
-        }
         res.status(500).json({ error: 'Có lỗi xảy ra trên máy chủ. Vui lòng thử lại.' });
     }
 });

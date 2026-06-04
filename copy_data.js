@@ -19,7 +19,6 @@ const filesMapping = {
     [path.join("Thủ tục hành chính", "Thủ tục hành chính.txt")]: "thu_tuc_hanh_chinh.txt",
     [path.join("Thủ tục hành chính", "MC-CTSV-02.txt")]: "bieu_mau_mc_ctsv_02.txt",
     [path.join("Thủ tục hành chính", "ĐT-SV-15.txt")]: "bieu_mau_dt_sv_15.txt",
-    [path.join("Giảng viên", "20-2023.txt")]: "giang_vien_info.txt",
 };
 
 for (const [srcRel, destName] of Object.entries(filesMapping)) {

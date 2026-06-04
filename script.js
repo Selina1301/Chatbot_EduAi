@@ -59,6 +59,11 @@ function renderMarkdown(text) {
     .replace(/^[\-\*] (.+)$/gm, "<li>$1</li>")
     // Numbered lists
     .replace(/^\d+\. (.+)$/gm, "<li>$1</li>")
+    // Images
+    .replace(
+      /!\[(.+?)\]\((https?:\/\/[^\)]+)\)/g,
+      '<img src="$2" alt="$1" class="chat-inline-image" style="max-width: 100%; border-radius: 8px; margin-top: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: block;">',
+    )
     // Links
     .replace(
       /\[(.+?)\]\((https?:\/\/[^\)]+)\)/g,
@@ -205,7 +210,7 @@ async function handleSend() {
     const response = await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: text, sessionId, stream: true }),
+      body: JSON.stringify({ message: text, sessionId }),
     });
 
     if (!response.ok) {
@@ -220,50 +225,32 @@ async function handleSend() {
       return;
     }
 
+    const data = await response.json();
     removeTypingIndicator();
 
-    // Tạo tin nhắn bot rỗng để cập nhật dữ liệu stream liên tục
+    if (data.error) {
+      appendMessage(data.error, "bot", true);
+      setLoading(false);
+      return;
+    }
+
+    // Tạo tin nhắn bot rỗng để cập nhật hiệu ứng gõ chữ ở Frontend
     const botRow = appendMessage("", "bot");
     const bubble = botRow.querySelector(".msg-bubble");
-    let botMessageText = "";
+    const replyText = data.reply || "";
 
-    const reader = response.body.getReader();
-    const decoder = new TextDecoder("utf-8");
-    let buffer = "";
+    // Tách từ theo khoảng trắng để gõ chữ từng từ mượt mà
+    const words = replyText.split(" ");
+    let currentText = "";
 
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
-
-      buffer += decoder.decode(value, { stream: true });
-      const lines = buffer.split("\n");
-      buffer = lines.pop(); // giữ lại phần dư chưa hoàn thành
-
-      for (const line of lines) {
-        const cleanedLine = line.trim();
-        if (cleanedLine.startsWith("data: ")) {
-          const dataStr = cleanedLine.substring(6);
-          if (dataStr === "[DONE]") {
-            break;
-          }
-          try {
-            const data = JSON.parse(dataStr);
-            if (data.error) {
-              bubble.classList.add("error");
-              bubble.textContent = data.error;
-              scrollToBottom();
-              break;
-            } else if (data.delta) {
-              botMessageText += data.delta;
-              bubble.innerHTML = renderMarkdown(botMessageText);
-              scrollToBottom();
-            }
-          } catch (err) {
-            console.error("Lỗi phân tích cú pháp chunk:", err);
-          }
-        }
-      }
+    for (let i = 0; i < words.length; i++) {
+      currentText += (i === 0 ? "" : " ") + words[i];
+      bubble.innerHTML = renderMarkdown(currentText);
+      scrollToBottom();
+      // Chờ 25-30ms trước khi gõ từ tiếp theo
+      await new Promise((resolve) => setTimeout(resolve, 25));
     }
+
   } catch (err) {
     removeTypingIndicator();
     appendMessage(

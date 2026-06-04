@@ -1,0 +1,148 @@
+[
+  {
+    "name": "Khoa Cơ khí",
+    "url": "https://uneti.edu.vn/khoa-co-khi/",
+    "majors": [
+      "Ngành CNKT Cơ khí",
+      "Ngành CNKT Ô tô",
+      "Ngành CNKT Cơ Điện tử"
+    ],
+    "diagram": "https://uneti.edu.vn/wp-content/uploads/2020/02/1-7.png",
+    "description": "Khoa Cơ khí là một trong các khoa mũi nhọn về đào tạo kỹ thuật ứng dụng tại UNETI. Khoa quản lý và đào tạo 3 ngành lớn: Công nghệ kỹ thuật Cơ khí, Công nghệ kỹ thuật Ô tô, và Công nghệ kỹ thuật Cơ điện tử."
+  },
+  {
+    "name": "Khoa Thương mại",
+    "url": "https://uneti.edu.vn/khoa-thuong-mai/",
+    "majors": [
+      "Ngành Kinh doanh thương mại",
+      "Ngành Logistic và quản lý chuỗi cung ứng"
+    ],
+    "diagram": "https://uneti.edu.vn/wp-content/uploads/2022/06/1-9.png",
+    "description": "Khoa Thương mại đào tạo nguồn nhân lực chất lượng cao trong lĩnh vực Kinh doanh thương mại, Logistics và Quản lý chuỗi cung ứng, đáp ứng nhu cầu hội nhập kinh tế quốc tế."
+  },
+  {
+    "name": "Khoa Du lịch và Khách sạn",
+    "url": "https://uneti.edu.vn/khoa-du-lich-va-khach-san/",
+    "majors": [
+      "Ngành Quản trị Dịch vụ Du lịch và Lữ hành"
+    ],
+    "diagram": "",
+    "description": "Khoa Du lịch và Khách sạn đào tạo sinh viên chuyên ngành quản trị lữ hành, nhà hàng, khách sạn tại cả hai cơ sở Hà Nội và Nam Định, kết hợp thực hành thực tế sâu sắc."
+  },
+  {
+    "name": "Khoa Công nghệ thực phẩm",
+    "url": "https://uneti.edu.vn/khoa-cong-nghe-thuc-pham/",
+    "majors": [
+      "Ngành Công nghệ thực phẩm"
+    ],
+    "diagram": "",
+    "description": "Khoa Công nghệ thực phẩm đào tạo các kỹ sư công nghệ thực phẩm có kiến thức chuyên môn vững vàng về bảo quản, chế biến thực phẩm, kiểm soát chất lượng và an toàn thực phẩm."
+  },
+  {
+    "name": "Khoa Công nghệ thông tin",
+    "url": "https://uneti.edu.vn/khoa-cong-nghe-thong-tin/",
+    "majors": [
+      "Ngành Công nghệ thông tin",
+      "Ngành Mạng máy tính và truyền thông dữ liệu",
+      "Ngành Khoa học dữ liệu"
+    ],
+    "diagram": "https://uneti.edu.vn/wp-content/uploads/2020/02/word-image-1771-1.jpeg",
+    "description": "Khoa Công nghệ thông tin là trung tâm đào tạo nguồn nhân lực CNTT chất lượng cao phục vụ chuyển đổi số quốc gia, bao gồm các ngành: Công nghệ thông tin, Mạng máy tính và truyền thông dữ liệu, Khoa học dữ liệu."
+  },
+  {
+    "name": "Khoa Điện - Tự động hóa",
+    "url": "https://uneti.edu.vn/khoa-dien/",
+    "majors": [
+      "Ngành CNKT Điện - Điện tử",
+      "Ngành CNKT Điều khiển và Tự động hóa"
+    ],
+    "diagram": "https://uneti.edu.vn/wp-content/uploads/2020/02/1-46.jpg",
+    "description": "Khoa Điện - Tự động hóa cung cấp nguồn nhân lực kỹ thuật cao trong các lĩnh vực Hệ thống điện, Thiết bị điện, Điều khiển tự động và Robot hóa quy trình sản xuất."
+  },
+  {
+    "name": "Khoa Điện tử và Kỹ thuật máy tính",
+    "url": "https://uneti.edu.vn/khoa-dien-tu/",
+    "majors": [
+      "Ngành CNKT Điện tử viễn thông",
+      "Ngành CNKT Máy tính",
+      "Kỹ thuật MT"
+    ],
+    "diagram": "https://uneti.edu.vn/wp-content/uploads/2020/02/1-44.jpg",
+    "description": "Khoa Điện tử và Kỹ thuật máy tính đào tạo kỹ sư chuyên sâu về mạch điện tử, viễn thông, và thiết kế phần cứng/nhúng máy tính."
+  },
+  {
+    "name": "Khoa Dệt may và Thời trang",
+    "url": "https://uneti.edu.vn/khoa-det-may-va-thoi-trang/",
+    "majors": [
+      "Ngành Công nghệ Dệt, May",
+      "Ngành Công nghệ Sợi, Dệt"
+    ],
+    "diagram": "",
+    "description": "Khoa Dệt may và Thời trang có truyền thống đào tạo lâu đời nhất của trường, cung cấp các kỹ sư, nhà thiết kế thời trang và quản lý sản xuất dệt may hàng đầu Việt Nam."
+  },
+  {
+    "name": "Khoa Quản trị & Marketing",
+    "url": "https://uneti.edu.vn/1720/",
+    "majors": [
+      "Ngành Quản trị kinh doanh",
+      "Ngành Marketing"
+    ],
+    "diagram": "https://uneti.edu.vn/wp-content/uploads/2020/02/1-6.png",
+    "description": "Khoa Quản trị & Marketing đào tạo cử nhân Quản trị kinh doanh và Marketing năng động, sáng tạo, thực chiến, đáp ứng yêu cầu cao của thị trường lao động thời kỳ số."
+  },
+  {
+    "name": "Khoa Giáo dục thể chất và Quốc phòng",
+    "url": "https://uneti.edu.vn/khoa-giao-duc-the-chat-quoc-phong/",
+    "majors": [
+      "Khối môn chung"
+    ],
+    "diagram": "https://uneti.edu.vn/wp-content/uploads/2020/02/1-40.jpg",
+    "description": "Khoa Giáo dục thể chất và Quốc phòng phụ trách giảng dạy các học phần Giáo dục thể chất và Giáo dục quốc phòng - An ninh cho toàn bộ sinh viên trong trường."
+  },
+  {
+    "name": "Khoa Kế toán Kiểm toán",
+    "url": "https://uneti.edu.vn/khoa-ke-toan/",
+    "majors": [
+      "Ngành Kế toán"
+    ],
+    "diagram": "https://uneti.edu.vn/wp-content/uploads/2020/02/1-4.png",
+    "description": "Khoa Kế toán Kiểm toán đào tạo các cử nhân chuyên ngành Kế toán doanh nghiệp, Kiểm toán tài chính chuyên nghiệp, chính xác và có đạo đức nghề nghiệp cao."
+  },
+  {
+    "name": "Khoa Tài chính - Ngân hàng và Bảo hiểm",
+    "url": "https://uneti.edu.vn/khoa-tai-chinh-ngan-hang/",
+    "majors": [
+      "Ngành Tài chính - Ngân hàng",
+      "Ngành Bảo hiểm"
+    ],
+    "diagram": "https://uneti.edu.vn/wp-content/uploads/2020/02/1-57.jpg",
+    "description": "Khoa Tài chính - Ngân hàng và Bảo hiểm cung cấp nhân lực chất lượng cho các tổ chức tài chính, ngân hàng thương mại, tập đoàn bảo hiểm đa quốc gia."
+  },
+  {
+    "name": "Khoa Khoa học ứng dụng",
+    "url": "https://uneti.edu.vn/khoa-khoa-hoc-co-ban/",
+    "majors": [
+      "Khối môn chung"
+    ],
+    "diagram": "https://uneti.edu.vn/wp-content/uploads/2020/02/1-95.jpg",
+    "description": "Khoa Khoa học ứng dụng phụ trách giảng dạy các môn khoa học cơ bản như Toán học, Vật lý, Hóa học cho sinh viên khối kỹ thuật và kinh tế trong trường."
+  },
+  {
+    "name": "Khoa Ngoại ngữ",
+    "url": "https://uneti.edu.vn/khoa-ngoai-ngu/",
+    "majors": [
+      "Ngành Ngôn ngữ Anh"
+    ],
+    "diagram": "https://uneti.edu.vn/wp-content/uploads/2020/02/1-37-scaled.jpg",
+    "description": "Khoa Ngoại ngữ đào tạo cử nhân Ngôn ngữ Anh đồng thời phụ trách giảng dạy Tiếng Anh cơ bản, Tiếng Anh chuyên ngành cho toàn bộ sinh viên UNETI."
+  },
+  {
+    "name": "Khoa Lý luận Chính trị và Pháp luật",
+    "url": "https://uneti.edu.vn/khoa-ly-luan-chinh-tri/",
+    "majors": [
+      "Khối môn chung"
+    ],
+    "diagram": "",
+    "description": "Khoa Lý luận Chính trị và Pháp luật phụ trách giảng dạy các môn lý luận chính trị và pháp luật đại cương cho toàn thể sinh viên toàn trường."
+  }
+]
