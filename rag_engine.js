@@ -98,20 +98,15 @@ function initRAG() {
             // 2. Duyệt qua Phần B (danh sách giảng viên chi tiết)
             while (i < lines.length) {
                 const line = lines[i];
-                const matchRecordStart = line.match(/^(\d+)(?:\s+(.+))?$/);
-                
-                if (matchRecordStart) {
-                    const stt = matchRecordStart[1];
-                    const nameInStart = matchRecordStart[2];
-                    
-                    if (nameInStart) {
-                        // Kỷ lục 6 dòng (STT và Tên trên cùng dòng)
-                        const name = nameInStart.trim();
-                        const birthYear = lines[i + 1] || '';
-                        const gender = lines[i + 2] || '';
-                        const title = lines[i + 3] || '';
-                        const degree = lines[i + 4] || '';
-                        const subject = lines[i + 5] || '';
+                if (line.includes('=>')) {
+                    const parts = line.split('=>').map(p => p.trim());
+                    if (parts.length >= 6) {
+                        const name = parts[1];
+                        const birthYear = parts[2];
+                        const gender = parts[3];
+                        const title = parts[4];
+                        const degree = parts[5];
+                        const subject = parts[6] || parts[0];
                         
                         const deptName = getDepartmentByMajor(subject);
                         const deptInfo = deptName ? ` thuộc ${deptName}` : '';
@@ -122,33 +117,9 @@ function initRAG() {
                             content: lecturerText,
                             tokens: normalizeAndTokenize(lecturerText)
                         });
-                        i += 6;
-                        continue;
-                    } else {
-                        // Kỷ lục 7 dòng (STT riêng, Tên dòng kế tiếp)
-                        const name = lines[i + 1] || '';
-                        const birthYear = lines[i + 2] || '';
-                        const gender = lines[i + 3] || '';
-                        const title = lines[i + 4] || '';
-                        const degree = lines[i + 5] || '';
-                        const subject = lines[i + 6] || '';
-                        
-                        const deptName = getDepartmentByMajor(subject);
-                        const deptInfo = deptName ? ` thuộc ${deptName}` : '';
-                        const lecturerText = `Giảng viên ${name}${deptInfo}, sinh năm ${birthYear}, giới tính ${gender}, chức danh ${title}, trình độ đào tạo ${degree}, chuyên ngành giảng dạy ${subject}.`;
-                        allChunks.push({
-                            id: chunkId++,
-                            source: fileLabel,
-                            content: lecturerText,
-                            tokens: normalizeAndTokenize(lecturerText)
-                        });
-                        i += 7;
-                        continue;
                     }
-                }
-                
-                // Nếu là tiêu đề khối ngành hoặc mô tả chung dài thì giữ lại
-                if (line.length >= 40) {
+                } else if (line.length >= 40) {
+                    // Nếu là tiêu đề khối ngành hoặc mô tả chung dài thì giữ lại
                     allChunks.push({
                         id: chunkId++,
                         source: fileLabel,

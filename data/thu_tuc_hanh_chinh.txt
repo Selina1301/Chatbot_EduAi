@@ -1,77 +1,58 @@
-[Thủ tục hành chính - 1. Đăng ký cấp lại mật khẩu trang cá nhân sinh viên UNETI]
-Đối tượng: Sinh viên bị mất, quên mật khẩu trang cá nhân học tập.
-Bước 1 (B1): Sinh viên đề nghị trực tiếp tại bộ phận Một cửa hoặc gửi đề nghị qua Email: sv.phongctsv@uneti.edu.vn
-Bước 2 (B2): Sinh viên nhận kết quả cấp lại mật khẩu trực tiếp hoặc qua email cá nhân.
-
-[Thủ tục hành chính - 2. Đăng ký xin cấp giấy xác nhận sinh viên đang học tại trường UNETI]
-Đối tượng: Sinh viên cần giấy xác nhận đang học tại trường để xin việc, xin miễn nghĩa vụ quân sự,...
-Bước 1 (B1): Sinh viên đề nghị trực tiếp tại bộ phận Một cửa hoặc gửi đề nghị qua Email: sv.phongctsv@uneti.edu.vn. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận. Thời gian giải quyết: 2 ngày.
-Bước 2 (B2): Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên (hoặc CMT/CCCD) đến nhận kết quả trực tiếp tại bộ phận Một cửa theo địa điểm học của sinh viên.
-
-[Thủ tục hành chính - 3. Đăng ký xin cấp giấy xác nhận vay vốn sinh viên UNETI]
-Đối tượng: Sinh viên có nhu cầu vay vốn tín dụng sinh viên tại các ngân hàng chính sách xã hội.
-Bước 1 (B1): Sinh viên đề nghị trực tiếp tại bộ phận Một cửa hoặc gửi đề nghị qua Email: sv.phongctsv@uneti.edu.vn. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận. Thời gian giải quyết: 2 ngày.
-Bước 2 (B2): Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên (hoặc CMT/CCCD) đến nhận kết quả tại bộ phận Một cửa theo địa điểm học của sinh viên.
-
-[Thủ tục hành chính - 4. Đăng ký xin cấp giấy xác nhận đối tượng chính sách miễn giảm học phí UNETI]
-Đối tượng: Sinh viên thuộc diện chính sách được miễn, giảm học phí theo quy định cần giấy xác nhận.
-Bước 1 (B1): Sinh viên nộp giấy đề nghị tại bộ phận Một cửa hoặc gửi đề nghị qua Email: sv.phongctsv@uneti.edu.vn. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận. Biểu mẫu sử dụng: MC-CTSV-02. Thời gian giải quyết: 2 ngày.
-Bước 2 (B2): Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên (hoặc CMT/CCCD) đến nhận kết quả tại bộ phận Một cửa theo địa điểm học của sinh viên.
-
-[Thủ tục hành chính - 5. Đăng ký xin xác nhận sổ ưu đãi chính sách giáo dục sinh viên UNETI]
-Đối tượng: Sinh viên là con thương binh, bệnh binh, người nhiễm chất độc hóa học,... được hưởng chế độ ưu đãi giáo dục.
-Bước 1 (B1): Sinh viên nộp trực tiếp sổ ưu đãi tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận. Thời gian giải quyết: 2 ngày.
-Bước 2 (B2): Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên (hoặc CMT/CCCD) đến nhận kết quả tại bộ phận Một cửa nơi mình làm thủ tục lúc ban đầu.
-
-[Thủ tục hành chính - 6. Đăng ký xin cấp giấy xác nhận làm vé tháng xe buýt sinh viên UNETI]
-Đối tượng: Sinh viên có nhu cầu sử dụng vé tháng xe buýt ưu đãi dành cho học sinh, sinh viên.
-Bước 1 (B1): Sinh viên lấy bản đăng ký làm vé tháng xe buýt tại các điểm bán vé tháng xe buýt công cộng, tự khai thông tin và dán ảnh thẻ vào bản đăng ký đó.
-Bước 2 (B2): Sinh viên nộp bản đăng ký làm vé tháng xe buýt tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận. Thời gian giải quyết: 2 ngày.
-Bước 3 (B3): Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên (hoặc CMT/CCCD) đến nhận kết quả tại bộ phận Một cửa theo địa điểm học của sinh viên.
-
-[Thủ tục hành chính - 7. Đăng ký xin cấp giấy xác nhận thuê nhà ở sinh viên UNETI]
-Đối tượng: Sinh viên có nhu cầu thuê nhà ở sinh viên tại khu ký túc xá.
-Bước 1 (B1): Sinh viên lấy bản đăng ký thuê nhà ở sinh viên tại khu ký túc xá sinh viên và tự khai đầy đủ thông tin vào bản đăng ký đó.
-Bước 2 (B2): Sinh viên nộp bản đăng ký thuê nhà ở sinh viên tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận. Thời gian giải quyết: 2 ngày.
-Bước 3 (B3): Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên (hoặc CMT/CCCD) đến nhận kết quả tại bộ phận Một cửa theo địa điểm học của sinh viên.
-
-[Thủ tục hành chính - 8. Đăng ký cấp lại thẻ bảo hiểm y tế sinh viên UNETI]
-Đối tượng: Sinh viên đã tham gia mua bảo hiểm y tế tại trường nhưng bị mất, hỏng hoặc thất lạc thẻ BHYT.
-Bước 1 (B1): Sinh viên nộp giấy đề nghị tại bộ phận Một cửa theo mẫu quy định (Biểu mẫu CTSV-SV-06). Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận. Thời gian giải quyết: 2 ngày.
-Bước 2 (B2): Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên (hoặc CMT/CCCD) đến nhận kết quả tại bộ phận Một cửa theo địa điểm học của sinh viên.
-
-[Thủ tục hành chính - 9. Đăng ký xin bảo lưu kết quả học tập sinh viên UNETI]
-Đối tượng: Sinh viên được điều động vào lực lượng vũ trang, bị ốm/tai nạn phải điều trị dài ngày hoặc hoàn cảnh gia đình đặc biệt khó khăn muốn bảo lưu học tập.
-Bước 1 (B1): Sinh viên làm đơn xin bảo lưu kết quả học tập theo mẫu quy định (Biểu mẫu CTSV-SV-03); xin đầy đủ xác nhận của Cố vấn học tập (CVHT), Khoa chuyên môn và chính quyền địa phương trong đơn.
-Bước 2 (B2): Sinh viên nộp đơn xin bảo lưu kèm các giấy tờ xác minh lý do (như Quyết định nhập ngũ, Xác nhận của bệnh viện cấp huyện trở lên, Xác nhận hộ nghèo/hoàn cảnh khó khăn của địa phương) tại bộ phận Một cửa. Thời điểm hoàn tất đề nghị là thời điểm sinh viên nhận được Email (lần 1). Thời gian giải quyết: 5 ngày.
-Bước 3 (B3): Sinh viên nhận quyết định bảo lưu học tập qua điện thoại hoặc email cá nhân.
-
-[Thủ tục hành chính - 10. Đăng ký xin quay trở lại học tập sinh viên UNETI]
-Đối tượng: Sinh viên hết thời gian bảo lưu kết quả học tập hoặc hết thời gian bị đình chỉ học tập muốn quay lại học tiếp.
-Bước 1 (B1): Sinh viên làm đơn xin trở lại học tập theo mẫu quy định (Biểu mẫu CTSV-SV-02) trước thời điểm bắt đầu học kỳ mới ít nhất 14 ngày, có ý kiến đồng ý của gia đình và xác nhận của chính quyền địa phương trong đơn.
-Bước 2 (B2): Sinh viên nộp đơn xin trở lại học tập kèm Quyết định bảo lưu (hoặc quyết định đình chỉ học tập) trước đó tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất là thời điểm sinh viên nhận được Email (lần 1). Thời gian giải quyết: 5 ngày.
-Bước 3 (B3): Sinh viên nhận kết quả quyết định cho phép trở lại học tập qua điện thoại hoặc email cá nhân.
-
-[Thủ tục hành chính - 11. Xin thôi học và rút hồ sơ sinh viên UNETI]
-Đối tượng: Sinh viên tự nguyện xin thôi học do hoàn cảnh gia đình khó khăn hoặc lý do cá nhân khác.
-Bước 1 (B1): Sinh viên làm đơn xin thôi học theo mẫu quy định (Biểu mẫu CTSV-SV-05), xin đầy đủ ý kiến đồng ý của gia đình, xác nhận của Cố vấn học tập (CVHT) và chính quyền địa phương trong đơn.
-Bước 2 (B2): Sinh viên nộp đơn xin thôi học tại bộ phận Một cửa. Thời điểm hoàn tất đề nghị là khi sinh viên nhận được Email thông báo tiếp nhận (lần 1). Thời gian giải quyết: 5 ngày.
-Bước 3 (B3): Sinh viên mang theo thẻ sinh viên (hoặc CMT/CCCD) trực tiếp đến Phòng Công tác sinh viên nhận lại hồ sơ gốc vào ngày Thứ sáu hàng tuần.
-
-[Thủ tục hành chính - 12. Đăng ký xin nghỉ học tạm thời (1 tuần) có lý do sinh viên UNETI]
-Đối tượng: Sinh viên bị ốm đau, tai nạn cần xin nghỉ học tạm thời trong thời gian ngắn (tối đa 1 tuần) để điều trị.
-Bước 1 (B1): Sinh viên làm đơn xin nghỉ học theo mẫu quy định (Biểu mẫu CTSV-SV-04), xin xác nhận của Cố vấn học tập (CVHT) vào trong đơn.
-Bước 2 (B2): Sinh viên nộp đơn xin nghỉ học kèm giấy tờ xác minh lý do nghỉ (như Giấy ra viện, Xác nhận khám bệnh của cơ quan y tế cấp huyện trở lên) tại bộ phận Một cửa. Thời điểm hoàn tất đề nghị là khi nhận được Email (lần 1). Thời gian giải quyết: 2 ngày.
-Bước 3 (B3): Căn cứ vào thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên (hoặc CMT/CCCD) đến nhận kết quả tại bộ phận Một cửa theo địa điểm học.
-
-[Thủ tục hành chính - 13. Đăng ký xin chuyển địa điểm học tập sinh viên UNETI]
-Đối tượng: Sinh viên có nguyện vọng chuyển địa điểm học tập từ cơ sở Hà Nội về cơ sở Nam Định hoặc ngược lại.
-Bước 1 (B1): Sinh viên làm đơn xin chuyển địa điểm học tập theo mẫu quy định (Biểu mẫu CTSV-SV-01) trước thời điểm bắt đầu học kỳ mới ít nhất 14 ngày, đơn phải có ý kiến đồng ý và ký xác nhận của gia đình sinh viên.
-Bước 2 (B2): Sinh viên nộp đơn xin chuyển địa điểm học tập tại bộ phận Một cửa. Cán bộ nhập yêu cầu vào hệ thống và sinh viên nhận được Email thông báo (lần 1). Thời gian giải quyết: 5 ngày.
-Bước 3 (B3): Sinh viên nhận quyết định cho phép chuyển địa điểm học tập qua điện thoại hoặc email cá nhân.
-
-[Thủ tục hành chính - 14. Đăng ký xin học chương trình đào tạo chất lượng cao sinh viên UNETI]
-Đối tượng: Sinh viên có nhu cầu đăng ký học chương trình đào tạo chất lượng cao (CLC).
-Bước 1 (B1): Sinh viên làm đơn đăng ký theo mẫu quy định (Biểu mẫu ĐT-SV-15), xin xác nhận của Khoa chuyên môn trực thuộc vào đơn.
-Bước 2 (B2): Sinh viên nộp đơn tại bộ phận Một cửa. Cán bộ tiếp nhận nhập thông tin và sinh viên nhận được Email thông báo tiếp nhận (lần 1).
-Bước 3 (B3): Sau khi nhà trường xét duyệt, sinh viên truy cập vào trang cá nhân học tập (sinhvien.uneti.edu.vn) để xem kết quả đăng ký thành công.
+1. Đăng ký cấp lại mật khẩu trang cá nhân sinh viên
+B1: Sinh viên đề nghị tại bộ phận Một cửa hoặc gửi đề nghị qua Email: sv.phongctsv@uneti.edu.vn
+B2: Sinh viên nhận kết quả trực tiếp hoặc qua email cá nhân.
+2. Đăng ký xin cấp giấy xác nhận sinh viên đang học tại trường
+B1: Sinh viên đề nghị tại bộ phận Một cửa hoặc gửi đề nghị qua Email: sv.phongctsv@uneti.edu.vn .Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B2: Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên  mang theo thẻ sinh viên(CMT/CCCD)  đến nhận kết quả tại bộ phận Một cửa theo địa điểm học của sinh viên
+3. Đăng ký xin cấp giấy xác nhận vay vốn
+B1: Sinh viên đề nghị tại bộ phận Một cửa hoặc gửi đề nghị qua Email: sv.phongctsv@uneti.edu.vn . Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B2: Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên(CMT/CCCD)  đến nhận kết quả tại bộ phận Một cửa theo địa điểm học của sinh viên
+4. Đăng ký xin cấp giấy xác nhận đối tượng chính sách
+B1: Sinh viên nộp giấy đề nghị tại bộ phận Một cửa hoặc gửi đề nghị qua Email: sv.phongctsv@uneti.edu.vn .Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B2: Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên(CMT/CCCD)  đến nhận kết quả tại bộ phận Một cửa theo địa điểm học của sinh viên
+Download biểu mẫu (MC-CTSV-02) tại đây
+5. Đăng ký xin xác nhận sổ ưu đãi
+B1: Sinh viên nộp sổ ưu đãi tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B2: Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên(CMT/CCCD)  đến nhận kết quả tại bộ phận Một cửa nơi mình làm thủ tục lúc ban đầu
+6. Đăng ký xin cấp giấy xác nhận làm vé tháng xe buýt
+B1: Sinh viên lấy bản đăng ký làm vé tháng xe buýt tại các điểm bán vé tháng xe buýt và khai thông tin, dán ảnh vào bản đăng ký đó.
+B2: Sinh viên nộp bản đăng ký làm vé tháng xe buýt tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B3: Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên(CMT/CCCD)  đến nhận kết quả tại bộ phận Một cửa theo địa điểm học của sinh viên
+7. Đăng ký xin cấp giấy xác nhận thuê nhà ở sinh viên
+B1: Sinh viên lấy bản đăng ký thuê nhà ở sinh viên tại khu ký túc xá sinh viên và khai thông tin vào bản đăng ký đó.
+B2: Sinh viên nộp bản đăng ký thuê nhà ở sinh viên tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B3: Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên(CMT/CCCD)  đến nhận kết quả tại bộ phận Một cửa theo địa điểm học của sinh viên
+8. Đăng ký cấp lại thẻ bảo hiểm y tế
+B1: Sinh viên nộp giấy đề nghị tại bộ phận Một cửa theo mẫu. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B2: Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên(CMT/CCCD)  đến nhận kết quả tại bộ phận Một cửa theo địa điểm học của sinh viên
+Download biểu mẫu (CTSV-SV-06) tại đây
+9. Đăng ký xin bảo lưu kết quả học tập
+B1: Sinh viên làm đơn xin bảo lưu theo mẫu; xin xác nhận của CVHT, Khoa chuyên môn, chính quyền địa phương trong đơn.
+B2: Sinh viên nộp đơn xin bảo lưu kèm giấy tờ xác minh lý do xin bảo lưu tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B3: Sinh viên nhận kết quả trả lời qua điện thoại, email cá nhân
+Download biểu mẫu (CTSV-SV-03) tại đây
+10. Đăng ký xin quay trở lại học tập
+B1: Sinh viên làm đơn xin trở lại học tập theo mẫu trước thời điểm bắt đầu học kỳ mới 14 ngày, có ý kiến gia đình, xác nhận của chính quyền địa phương trong đơn.
+B2: Sinh viên nộp đơn xin trở lại học tập kèm quyết định bảo lưu (hoặc đình chỉ) đã có tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B3: Sinh viên nhận kết quả trả lời qua điện thoại, email cá nhân
+Download biểu mẫu (CTSV-SV-02) tại đây
+11. Xin thôi học và rút hồ sơ
+B1: Sinh viên làm đơn xin thôi học theo mẫu, có ý kiến gia đình, xin xác nhận của CVHT, chính quyền địa phương trong đơn.
+B2: Sinh viên nộp đơn xin thôi học tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B3: Sinh viên mang theo thẻ sinh viên (CMT/CCCD) đến Phòng Công tác sinh viên nhận hồ sơ vào thứ 6 hàng tuần
+Download biểu mẫu (CTSV-SV-05) tại đây
+12. Đăng ký xin nghỉ học tạm thời (1 tuần) có lý do
+B1: Sinh viên làm đơn xin nghỉ học theo mẫu, có xác nhận của CVHT trong đơn.
+B2: Sinh viên nộp đơn xin nghỉ học kèm giấy tờ xác minh lý do xin nghỉ học tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B3: Căn cứ vào nội dung thông báo của Email (lần 2), sinh viên mang theo thẻ sinh viên(CMT/CCCD)  đến nhận kết quả tại bộ phận Một cửa theo địa điểm học của sinh viên
+Download biểu mẫu (CTSV-SV-04) tại đây
+13. Đăng ký xin chuyển địa điểm học tập
+B1: Sinh viên làm đơn xin chuyển địa điểm học tập theo mẫu trước thời điểm bắt đầu học kỳ mới 14 ngày, có ý kiến của gia đình trong đơn.
+B2: Sinh viên nộp đơn xin chuyển địa điểm học tập tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B3: Sinh viên nhận kết quả trả lời qua điện thoại, email cá nhân
+Download biểu mẫu (CTSV-SV-01) tại đây
+14. Đăng ký xin học chương trình đào tạo chất lượng
+B1: Sinh viên làm đơn theo mẫu, có xác nhận của Khoa chuyên môn trong đơn.
+B2: Sinh viên nộp đơn tại bộ phận Một cửa. Thời điểm cán bộ hoàn tất đề nghị vào phần mềm là thời điểm sinh viên nhận được Email (lần 1) thông báo đề nghị đã được tiếp nhận
+B3: Sau khi được Nhà trường xét duyệt, sinh viên vào trang cá nhân để xem kết quả.
+Download biểu mẫu (ĐT-SV-15) tại đây

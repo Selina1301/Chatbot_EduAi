@@ -19,20 +19,37 @@ function normalizeAndTokenize(text) {
     const cleanText = text.toLowerCase();
     const noDiacritics = removeDiacritics(cleanText);
     
-    // Tách từ có dấu
+    // Tách từ đơn có dấu
     const tokensWithAccents = cleanText
         .replace(/[^\w\sàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/g, ' ')
         .split(/\s+/)
         .filter(word => word.length > 1);
         
-    // Tách từ không dấu
+    // Tách từ đơn không dấu
     const tokensNoAccents = noDiacritics
         .replace(/[^\w\s]/g, ' ')
         .split(/\s+/)
         .filter(word => word.length > 1);
         
-    // Gộp cả 2 để đảm bảo truy vấn không dấu vẫn khớp chính xác dữ liệu có dấu
-    return Array.from(new Set([...tokensWithAccents, ...tokensNoAccents]));
+    // Tạo Bigram (từ ghép 2 từ) có dấu
+    const bigramsWithAccents = [];
+    for (let i = 0; i < tokensWithAccents.length - 1; i++) {
+        bigramsWithAccents.push(`${tokensWithAccents[i]}_${tokensWithAccents[i+1]}`);
+    }
+    
+    // Tạo Bigram không dấu
+    const bigramsNoAccents = [];
+    for (let i = 0; i < tokensNoAccents.length - 1; i++) {
+        bigramsNoAccents.push(`${tokensNoAccents[i]}_${tokensNoAccents[i+1]}`);
+    }
+        
+    // Gộp cả từ đơn và từ ghép để đảm bảo truy vấn không dấu vẫn khớp chính xác dữ liệu có dấu
+    return Array.from(new Set([
+        ...tokensWithAccents, 
+        ...tokensNoAccents,
+        ...bigramsWithAccents,
+        ...bigramsNoAccents
+    ]));
 }
 
 // Tạo vector tần số từ (TF - Term Frequency)

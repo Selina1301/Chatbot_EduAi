@@ -41,7 +41,7 @@ app.use((req, res, next) => {
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // =====================================================
 // KHỞI TẠO RAG ENGINE (Lập chỉ mục cục bộ)
@@ -158,6 +158,49 @@ app.post('/api/chat', async (req, res) => {
 
         const sid = sessionId || 'default';
         console.log(`\n💬 [User]: ${message} (Session: ${sid})`);
+
+        // ✅ CHECK DIRECT AI MODE
+        const directAiRegex = /\bAI\b\s*[\?\!\.\)]*$/i;
+        if (directAiRegex.test(message)) {
+            console.log(`🤖 Phát hiện từ khóa "AI" ở cuối câu. Gọi trực tiếp Gemini Flash không qua RAG/KB...`);
+            
+            // Loại bỏ chữ "AI" và các khoảng trắng, dấu câu đi kèm ở cuối câu để lấy nội dung câu hỏi thực tế
+            let cleanMessage = message.replace(/\bAI\b\s*([\?\!\.\)]*)$/i, '$1').trim();
+            if (!cleanMessage) {
+                cleanMessage = message; // Phòng trường hợp user chỉ gõ mỗi chữ "AI"
+            }
+
+            // Lấy lịch sử chat từ SQLite
+            const history = dbManager.getSessionMessages(sid, 10);
+            const formattedHistory = history.map(h => ({ role: h.role, content: h.content }));
+
+            const DIRECT_AI_SYSTEM_PROMPT = `Bạn là Gemini, một trợ lý AI thông minh, nhiệt tình và thân thiện. Hãy trả lời câu hỏi của người dùng một cách tự nhiên, chi tiết, phong phú và chính xác. Trả lời bằng tiếng Việt.`;
+
+            const messages = [
+                { role: 'system', content: DIRECT_AI_SYSTEM_PROMPT },
+                ...formattedHistory,
+                { role: 'user', content: cleanMessage }
+            ];
+
+            console.log(`🚀 Gọi AI API trực tiếp (${AI_MODEL}) với prompt thực tế: "${cleanMessage}"`);
+            const reply = await callAIChat(messages);
+
+            // Lưu vào SQLite lịch sử chat (lưu tin nhắn gốc)
+            dbManager.addSessionMessage(sid, 'user', message);
+            dbManager.addSessionMessage(sid, 'assistant', reply);
+
+            console.log(`✅ [Bot Direct AI]: Trả lời thành công (${reply.length} ký tự)`);
+
+            return res.json({ 
+                reply, 
+                sessionId: sid,
+                source: 'gemini_direct',
+                quality: {
+                    confidence: 1.0,
+                    summary: "Câu trả lời trực tiếp từ Gemini Flash"
+                }
+            });
+        }
 
         // ✅ STEP 0: Phát hiện câu hỏi mơ hồ (Clarification)
         console.log('🤔 Đang kiểm tra câu hỏi...');
